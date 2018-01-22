@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
+    <title>Cat Energy: Подбор программы</title>
   </head>
   <body>
 
@@ -34,10 +34,9 @@
         <p class="questionnaire__description">Заполните анкету и мы поберём программу питания для вашего кота</p>
 
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
+
           <fieldset>
-            <legend class="visually-hiden">
-              Информация о коте
-            </legend>
+            <legend class="visually-hiden">Информация о коте</legend>
             <p>
               <label>
                 Имя:* <input type="text" name="name" placeholder="Барсик" required>
@@ -45,7 +44,7 @@
             </p>
             <p>
               <label>
-                Вес(кг):* <input type="number" name="weight" placeholder="7" min="1" required>
+                Вес(кг):* <input type="number" name="weight" placeholder="7" min="0" required>
               </label>
             </p>
             <p>
@@ -53,25 +52,27 @@
                 Возраст (лет): <input type="number" name="age" placeholder="7" min="0">
               </label>
             </p>
-            <input class="visually-hidden" id="weight-loss" type="radio" name="program" value="weight-loss" checked>
-            <input class="visually-hidden" id="set-of-weight" type="radio" name="program" value="set-of-weight">
-            <input class="visually-hidden" id="need-advice" type="radio" name="program" value="need-advice">
             <ul>
               <li>
-                <label for="weight-loss">Похудение</label>
+                <label>
+                  <input class="visually-hidden" type="radio" name="program" value="weight-loss" checked> Похудение
+                </label>
               </li>
               <li>
-                <label for="set-of-weight">Набор массы</label>
+                <label>
+                  <input class="visually-hidden" type="radio" name="program" value="set-of-weight"> Набор массы
+                </label>
               </li>
               <li>
-                <label for="need-advice">Не знаю (нужен ваш совет)</label>
+                <label>
+                  <input class="visually-hidden" type="radio" name="program" value="need-advice"> Не знаю (нужен ваш совет)
+                </label>
               </li>
             </ul>
           </fieldset>
+
           <fieldset>
-            <legend>
-              Контактные данные (владельца кота)
-            </legend>
+            <legend>Контактные данные (владельца кота)</legend>
             <p>
               <label>
                 E-mail:* <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -83,39 +84,41 @@
               </label>
             </p>
           </fieldset>
+
           <fieldset>
-            <legend>
-              Комментарий
-            </legend>
-            <input type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
+            <legend>Комментарий</legend>
+            <textarea name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
+
           <fieldset>
-            <legend>
-              Дополнительно
-            </legend>
-            <p>
-              <label>
-                <input type="checkbox" name="sweetener" checked> Сахарозаменитель
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox" name="water"> Питевая вода
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox" name="milk"> Молоко
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox" name="vitamins"> Витамины
-              </label>
-            </p>
+            <legend>Дополнительно</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="sweetener" checked> Сахарозаменитель
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="water"> Питевая вода
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="milk"> Молоко
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="vitamins"> Витамины
+                </label>
+              </li>
+            </ul>
           </fieldset>
+
           <button class="button" type="submit">Отправить заявку</button>
           <p>* &mdash; Обязательные поля</p>
+
         </form>
       </section>
 
