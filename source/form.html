@@ -33,91 +33,91 @@
         <h1 class="questionnaire__title">Подбор программы</h1>
         <p class="questionnaire__description">Заполните анкету и мы поберём программу питания для вашего кота</p>
 
-        <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="questionnaire__form owner-form" action="https://echo.htmlacademy.ru" method="post">
 
-          <fieldset>
+          <fieldset class="owner-form__section">
             <legend class="visually-hiden">Информация о коте</legend>
             <p>
-              <label>
-                Имя:* <input type="text" name="name" placeholder="Барсик" required>
+              <label class="owner-form__label">
+                Имя:* <input class="owner-form__field" type="text" name="name" placeholder="Барсик" required>
               </label>
             </p>
             <p>
-              <label>
-                Вес(кг):* <input type="number" name="weight" placeholder="7" min="0" required>
+              <label class="owner-form__label">
+                Вес(кг):* <input class="owner-form__field" type="number" name="weight" placeholder="7" min="0" required>
               </label>
             </p>
             <p>
-              <label>
-                Возраст (лет): <input type="number" name="age" placeholder="7" min="0">
+              <label class="owner-form__label">
+                Возраст (лет): <input class="owner-form__field" type="number" name="age" placeholder="7" min="0">
               </label>
             </p>
-            <ul>
+            <ul class="owner-form__list">
               <li>
-                <label>
+                <label class="owner-form__label">
                   <input class="visually-hidden" type="radio" name="program" value="weight-loss" checked> Похудение
                 </label>
               </li>
               <li>
-                <label>
+                <label class="owner-form__label">
                   <input class="visually-hidden" type="radio" name="program" value="set-of-weight"> Набор массы
                 </label>
               </li>
               <li>
-                <label>
+                <label class="owner-form__label">
                   <input class="visually-hidden" type="radio" name="program" value="need-advice"> Не знаю (нужен ваш совет)
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset>
-            <legend>Контактные данные (владельца кота)</legend>
+          <fieldset class="owner-form__section">
+            <legend class="owner-form__legend">Контактные данные (владельца кота)</legend>
             <p>
-              <label>
-                E-mail:* <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <label class="owner-form__label">
+                E-mail:* <input class="owner-form__field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
               </label>
             </p>
             <p>
-              <label>
-                Телефон:* <input type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <label class="owner-form__label">
+                Телефон:* <input class="owner-form__field" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
               </label>
             </p>
           </fieldset>
 
-          <fieldset>
-            <legend>Комментарий</legend>
-            <textarea name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <fieldset class="owner-form__section">
+            <legend class="owner-form__legend">Комментарий</legend>
+            <textarea class="owner-form__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
-          <fieldset>
-            <legend>Дополнительно</legend>
-            <ul>
+          <fieldset class="owner-form__section">
+            <legend class="owner-form__legend">Дополнительно</legend>
+            <ul  class="owner-form__list">
               <li>
-                <label>
-                  <input type="checkbox" name="sweetener" checked> Сахарозаменитель
+                <label class="owner-form__label">
+                  <input class="visually-hidden" type="checkbox" name="sweetener" checked> Сахарозаменитель
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="water"> Питевая вода
+                <label class="owner-form__label">
+                  <input class="visually-hidden" type="checkbox" name="water"> Питевая вода
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="milk"> Молоко
+                <label class="owner-form__label">
+                  <input class="visually-hidden" type="checkbox" name="milk"> Молоко
                 </label>
               </li>
               <li>
-                <label>
-                  <input type="checkbox" name="vitamins"> Витамины
+                <label class="owner-form__label">
+                  <input class="visually-hidden" type="checkbox" name="vitamins"> Витамины
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <button class="button" type="submit">Отправить заявку</button>
-          <p>* &mdash; Обязательные поля</p>
+          <button class="owner-form__submit button" type="submit">Отправить заявку</button>
+          <p class="owner-form__footnote">* &mdash; Обязательные поля</p>
 
         </form>
       </section>
