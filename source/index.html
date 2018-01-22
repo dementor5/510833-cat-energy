@@ -6,7 +6,134 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
+    <header class="page-header">
+      <nav class="main-nav">
+        <a class="main-nav__logo logo">
+          <img class="logo__image" src="https://via.placeholder.com/33x28" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»"><span class="logo__text">Cat Energy</span>
+        </a>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <h1 class="page-main__title">Чем итересно функциональное питание для котов «Кэт энерджи»?</h1>
+
+      <section class="first-screen">
+        <h2 class="first-screen__title">Функциональное питания для котов</h2>
+        <p class="first-screen__slogan">Занялся собой? Займись и котом!</p>
+        <p>
+          <img class="first-screen__image" src="https://via.placeholder.com/280x271" width="280" height="271" alt="Фотография продукта Cat Energy «Курица»">
+        </p>
+        <a class="first-screen__link button" href="form.html">Подобрать программу</a>
+      </section>
+
+      <section class="categories">
+        <h2 class="visually-hiden">Категории фукнциональого питания</h2>
+        <ul class="categories__list">
+          <li class="categories__item product">
+            <h3 class="product__title">Похудение</h3>
+            <p class="product__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="product__link" href="catalog.html">Каталог <span class="product__name">Slim</span></a>
+          </li>
+          <li class="categories__item product">
+            <h3 class="product__title">Набор массы</h3>
+            <p class="product__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="product__link" href="catalog.html">Каталог <span class="product__name">Pro</span></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="advantages">
+        <h2 class="advantages__title">Как это работает</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantage">
+            <p class="advantage_description">Функциональне питание содержит только полезные питательные вещества.</p>
+          </li>
+          <li class="advantages__item advantage">
+            <p class="advantage_description">Выпускается в виде порошка, который нужно лишь запить кипятком и готово.</p>
+          </li>
+          <li class="advantages__item advantage">
+            <p class="advantage_description">Замените один-два приёма обычной еды на наше функциональное питане.</p>
+          </li>
+          <li class="advantages__item advantage">
+            <p class="advantage_description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="live-example">
+        <h2 class="live-example__title">Живой пример</h2>
+        <p class="live-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не маенял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <table class="live-example__result">
+          <tr>
+            <td class="live-example__value">5 кг</td>
+            <td class="live-example__value">60 дней</td>
+          </tr>
+          <tr>
+            <td class="live-example__field">Снижение веса</td>
+            <td class="live-example__field">Затрачено времени</td>
+          </tr>
+          <tr>
+            <td class="live-example__total">Затраты на питание: 15 000 руб.</td>
+          </tr>
+        </table>
+        <img class="live-example__image" src="https://via.placeholder.com/320x240" widht="320" height="240" alt="Фото кота - Бориса">
+        <p class="live-example__switch switch">Было <img class="switch__img" src="https://via.placeholder.com/84x14" width="84" height="14" alt="Переключатель"> Стало</p>
+      </section>
+
+      <section class="contacts">
+        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <address class="contacts__address">
+          Ул. Большая<br>
+          Коонюшенная, д. 19/8<br>
+          Санкт-Петербург
+        </address>
+        <div class="contacts__map-container">
+          <img class="contacts__map" src="https://via.placeholder.com/320x360" width="320" heigt="360" alt="Схема проезда">
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <h2 class="page-footer__title">Cat Energy</h2>
+      <ul class="page-footer__social-list">
+        <li>
+          <a href="https://vk.com/catenergy">
+            <img src="https://via.placeholder.com/22x12" width="22" height="12" alt="Мы в vkontakte">
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/catenergy">
+            <img src="https://via.placeholder.com/16x16" width="16" height="16" alt="Мы в instagram">
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/catenery">
+            <img src="https://via.placeholder.com/10x19" width="10" height="19" alt="Мы в facebook">
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer_links">
+        <a href="https://htmlacademy.ru">HTML Academy</a>
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Иконка HTMLAcademy">
+        </a>
+      </div>
+    </footer>
 
   </body>
 </html>
