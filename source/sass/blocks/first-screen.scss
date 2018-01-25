@@ -1,7 +1,33 @@
 .first-screen {
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
+  margin-bottom: 23px;
+  padding: 0 20px;
+  padding-top: 27px;
 
   font-family: "Oswald", "Arial", sans-serif;
+  color: white;
+  text-align: center;
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.first-screen__title {
+  margin: 0;
+  margin-bottom: 25px;
   font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.first-screen__slogan {
+  margin-bottom: 29px;
+
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.first-screen__image-wrapper {
+  margin: 0;
+  padding: 0;
 }

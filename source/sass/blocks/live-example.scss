@@ -1,0 +1,93 @@
+.live-example {
+  margin-bottom: 29px;
+  padding-top: 17px;
+  padding-bottom: 35px;
+
+  background-color: #f2f2f2;
+}
+
+.live-example__inner {
+  margin-bottom: 35px;
+  padding: 0 20px;
+}
+
+.live-example__title {
+  margin: 0;
+  margin-bottom: 23px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 60px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #111111;
+}
+
+.live-example__description {
+  margin: 0;
+  margin-bottom: 25px;
+  padding-right: 14px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: #444444;
+}
+
+.live-example__results-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+
+.live-example__result {
+  position: relative;
+
+  width: 124px;
+  padding-top: 13px;
+  padding-bottom: 17px;
+
+  text-align: center;
+
+  border: 1px solid #cfcfcf;
+}
+
+.live-example__result-value {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.live-example__result-description {
+  position: absolute;
+  bottom: -16px;
+  left: 19px;
+
+  width: 82px;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Arial", sans-serif;
+  color: #444444;
+
+  background-color: #f2f2f2;
+}
+
+.live-example__cost {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #111111;
+  text-align: center;
+  text-transform: uppercase;
+}

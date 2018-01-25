@@ -1,0 +1,45 @@
+footer {
+  padding: 0 20px;
+  padding-top: 42px;
+  padding-bottom: 20px;
+
+  background-color: #f2f2f2;
+}
+
+.page-footer__logo {
+  margin: 0;
+  margin-bottom: 27px;
+
+  text-align: center;
+}
+
+.page-footer__social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  padding: 0 83px;
+  padding-top: 22px;
+  padding-left: 72px;
+
+  border-top: 1px solid #d9d9d9;
+  list-style: none;
+}
+
+.page-footer_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+
+  border-top: 1px solid #d9d9d9;
+}
+
+.page-footer_link-academy {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Arial", sans-serif;
+  color: #444444;
+}
