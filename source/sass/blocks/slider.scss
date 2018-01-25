@@ -1,0 +1,49 @@
+.slider__list {
+  padding: 0;
+}
+
+.slider__slide {
+  display: none;
+}
+
+.slider__btn-1:checked ~ .slider__list .slider__slide-1,
+.slider__btn-2:checked ~ .slider__list .slider__slide-2 {
+  display: block;
+}
+
+.slider__switch-case {
+  position: relative;
+
+  display: inline-flex;
+  width: 84px;
+  height: 14px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 20px;
+}
+
+.slider__switch {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+
+  width: 35px;
+  height: 6px;
+
+  background-color: $main-green;
+  border-radius: 20px;
+
+  cursor: pointer;
+}
+
+.slider__btn-2:checked ~ .slider__controls .slider__switch {
+  left: 40px;
+}
+
+.slider__label {
+  display: inline-block;
+  width: 42px;
+  height: 14px;
+
+  cursor: pointer;
+}

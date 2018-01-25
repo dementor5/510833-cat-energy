@@ -3,32 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Cat Energy: Подбор программы</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
-    <header class="page-header">
+    <header class="page-header container">
       <nav class="main-nav">
-        <a class="main-nav__logo logo" href="index.html">
-          <img class="logo__image" src="https://via.placeholder.com/33x28" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»"><span class="logo__text">Cat Energy</span>
-        </a>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item site-list__item--active">
-              <a>Подбор программы</a>
-            </li>
-          </ul>
+        <div class="main-nav__head">
+          <a class="main-nav__logo-link" href="index.html">
+            <img class="main-nav__logo" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»">
+            <img class="main-nav__logo-2" src="img/logo-mobile-header.svg" width="101" height="18" alt="Логотип Интернет-магазин «Кэт энерджи»">
+          </a>
+          <button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
         </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__item--active">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main class="page-form">
+    <main class="page-form container">
       <section class="questionnaire">
         <h1 class="questionnaire__title">Подбор программы</h1>
         <p class="questionnaire__description">Заполните анкету и мы поберём программу питания для вашего кота</p>
@@ -129,38 +132,39 @@
           Коонюшенная, д. 19/8<br>
           Санкт-Петербург
         </address>
-        <div class="contacts__map-container">
-          <img class="contacts__map" src="https://via.placeholder.com/320x360" width="320" heigt="360" alt="Схема проезда">
-        </div>
+        <div class="contacts__map"></div>
       </section>
     </main>
 
-    <footer class="page-footer">
-      <h2 class="page-footer__title">Cat Energy</h2>
+    <footer class="page-footer container">
+      <a class="page-footer__log" href="index.html">
+        <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+      </a>
       <ul class="page-footer__social-list">
         <li>
           <a href="https://vk.com/catenergy">
-            <img src="https://via.placeholder.com/22x12" width="22" height="12" alt="Мы в vkontakte">
+            <img src="img/icon-vk-mobile.svg" width="22" height="12" alt="Мы в vkontakte">
           </a>
         </li>
         <li>
           <a href="https://instagram.com/catenergy">
-            <img src="https://via.placeholder.com/16x16" width="16" height="16" alt="Мы в instagram">
+            <img src="img/icon-insta-mobile.svg" width="16" height="16" alt="Мы в instagram">
           </a>
         </li>
         <li>
           <a href="https://facebook.com/catenery">
-            <img src="https://via.placeholder.com/10x19" width="10" height="19" alt="Мы в facebook">
+            <img src="img/icon-fb-mobile.svg" width="10" height="19" alt="Мы в facebook">
           </a>
         </li>
       </ul>
       <div class="page-footer_links">
         <a href="https://htmlacademy.ru">HTML Academy</a>
         <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Иконка HTMLAcademy">
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Иконка HTMLAcademy">
         </a>
       </div>
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

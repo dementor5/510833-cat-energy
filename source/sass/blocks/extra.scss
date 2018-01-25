@@ -1,0 +1,21 @@
+.extra__event {
+  position: relative;
+
+  width: 280px;
+  height: 289px;
+
+  background-color: red;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 80px;
+    left: 110px;
+
+    width: 55px;
+    height: 60px;
+    background-image: url("../img/icon-gift.svg");
+  }
+}

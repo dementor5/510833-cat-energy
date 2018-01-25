@@ -1,0 +1,49 @@
+.product {
+  position: relative;
+
+  padding: 25px;
+  padding-top: 40px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+  }
+
+  &::before {
+    top: 12px;
+    left: 40px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $main-green;
+    border-radius: 50%;
+  }
+
+  &--slim::after {
+    top: 10px;
+    left: 50px;
+
+    width: 35px;
+    height: 49px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--pro::after {
+    top: 24px;
+    left: 32px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+}
+
+.product__title {
+  margin: 0;
+  margin-left: 90px;
+}
