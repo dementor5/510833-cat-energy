@@ -66,3 +66,19 @@ body {
   width: 320px;
   margin: 0 auto;
 }
+
+@mixin long-line ($top, $right, $width) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: $top;
+    right: $right;
+
+    width: $width;
+    height: 3px;
+
+    background-color: $main_green;
+  }
+}

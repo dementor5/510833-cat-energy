@@ -12,4 +12,20 @@
 
   background-color: $main_green;
   border: none;
+  cursor: pointer;
+
+  &--buy {
+    padding-top: 11px;
+    padding-bottom: 9px;
+    padding-left: 4px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--show-all {
+    color: #222222;
+
+    background-color: #f2f2f2;
+  }
 }

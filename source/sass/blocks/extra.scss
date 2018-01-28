@@ -1,21 +1,64 @@
-.extra__event {
+.extra {
+  padding: 0 20px;
+  padding-top: 27px;
+  padding-bottom: 35px;
+
+  border-top: 1px solid #ededed;
+}
+
+.extra__title {
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #111111;
+
+  @include long-line(15px, -20px, 53px);
+}
+
+.extra__list {
+  margin: 0;
+  margin-bottom: 39px;
+  padding: 0;
+
+  list-style: none;
+
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.extra__event-container {
   position: relative;
 
+  padding: 0 50px;
+  padding-top: 189px;
   width: 280px;
   height: 289px;
 
-  background-color: red;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
 
   &::before {
     content: "";
 
     position: absolute;
-    top: 80px;
-    left: 110px;
+    top: 65px;
+    left: 113px;
 
     width: 55px;
     height: 60px;
     background-image: url("../img/icon-gift.svg");
   }
+}
+
+.extra-event {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: white;
+  text-align: center;
 }

@@ -1,0 +1,41 @@
+.extra-item {
+  padding-top: 14px;
+  padding-bottom: 16px;
+
+  border-top: 1px solid #cdcdcd;
+}
+
+.extra-item__title {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.extra-item__characteristics {
+  width: 100%;
+  margin-bottom: 16px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Arial", sans-serif;
+  color: #444444;
+
+  border-collapse: collapse;
+}
+
+.extra-item__signature,
+.extra-item__value {
+  padding: 0;
+}
+
+.extra-item__value {
+  text-align: right;
+  text-transform: uppercase;
+}

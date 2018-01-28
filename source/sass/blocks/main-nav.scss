@@ -1,8 +1,12 @@
+.main-nav {
+  border-bottom: 1px solid #ededed;
+}
+
 .main-nav__head {
   display: flex;
-  margin-bottom: 16px;
   padding: 0 20px;
   padding-top: 11px;
+  padding-bottom: 16px;
 }
 
 .main-nav__logo-link {
@@ -28,6 +32,7 @@
 
   background: url("../img/icon-mobile-menu.svg");
   border: none;
+  cursor: pointer;
 
   &--hide {
     display: none;
@@ -44,6 +49,7 @@
 
   background: url("../img/icon-close.svg");
   border: none;
+  cursor: pointer;
 
   &--show {
     display: block;
