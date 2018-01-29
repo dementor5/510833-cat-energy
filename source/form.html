@@ -3,164 +3,189 @@
   <head>
     <meta charset="utf-8">
     <title>Cat Energy: Подбор программы</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
-    <header class="page-header">
+    <header class="page-header container">
       <nav class="main-nav">
-        <a class="main-nav__logo logo" href="index.html">
-          <img class="logo__image" src="https://via.placeholder.com/33x28" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»"><span class="logo__text">Cat Energy</span>
-        </a>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item site-list__item--active">
-              <a>Подбор программы</a>
-            </li>
-          </ul>
+        <div class="main-nav__head">
+          <a class="main-nav__logo-link" href="index.html">
+            <img class="main-nav__logo" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»">
+            <img class="main-nav__logo-2" src="img/logo-mobile-header.svg" width="101" height="18" alt="Логотип Интернет-магазин «Кэт энерджи»">
+          </a>
+          <button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
         </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__item--active">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main class="page-form">
+    <main class="page-form container">
       <section class="questionnaire">
         <h1 class="questionnaire__title">Подбор программы</h1>
-        <p class="questionnaire__description">Заполните анкету и мы поберём программу питания для вашего кота</p>
+        <p class="questionnaire__description">Заполните анкету и мы подберём программу&nbsp;питания для вашего кота</p>
 
         <form class="questionnaire__form owner-form" action="https://echo.htmlacademy.ru" method="post">
 
-          <fieldset class="owner-form__section">
-            <legend class="visually-hiden">Информация о коте</legend>
-            <p>
-              <label class="owner-form__label">
-                Имя:* <input class="owner-form__field" type="text" name="name" placeholder="Барсик" required>
-              </label>
-            </p>
-            <p>
-              <label class="owner-form__label">
-                Вес(кг):* <input class="owner-form__field" type="number" name="weight" placeholder="7" min="0" required>
-              </label>
-            </p>
-            <p>
-              <label class="owner-form__label">
-                Возраст (лет): <input class="owner-form__field" type="number" name="age" placeholder="7" min="0">
-              </label>
-            </p>
+          <fieldset class="owner-form__section owner-form__section--about-cat">
+            <legend class="visually-hidden">Информация о коте</legend>
+            <div class="owner-form__about-cat-inner">
+              <p class="owner-form__row">
+                <label class="owner-form__label">
+                  <span class="owner-form__signature">Имя:*</span>
+                  <input class="owner-form__field" type="text" name="name" placeholder="Барсик" required>
+                </label>
+              </p>
+              <p class="owner-form__row">
+                <label class="owner-form__label">
+                  <span class="owner-form__signature">Вес (кг):*</span>
+                  <input class="owner-form__field" type="number" name="weight" placeholder="7" min="0" required>
+                </label>
+              </p>
+              <p class="owner-form__row">
+                <label class="owner-form__label">
+                  <span class="owner-form__signature">Возраст&nbsp;(лет):</span>
+                  <input class="owner-form__field" type="number" name="age" placeholder="7" min="0">
+                </label>
+              </p>
+            </div>
             <ul class="owner-form__list">
-              <li>
-                <label class="owner-form__label">
-                  <input class="visually-hidden" type="radio" name="program" value="weight-loss" checked> Похудение
+              <li class="owner-form__item">
+                <label class="owner-form__label owner-form__label-radio">
+                  <input class="visually-hidden owner-form__radio" type="radio" name="program" value="weight-loss" checked>
+                  <span class="owner-form__signature owner-form__signature-radio">Похудение</span>
                 </label>
               </li>
-              <li>
-                <label class="owner-form__label">
-                  <input class="visually-hidden" type="radio" name="program" value="set-of-weight"> Набор массы
+              <li class="owner-form__item">
+                <label class="owner-form__label  owner-form__label-radio">
+                  <input class="visually-hidden owner-form__radio" type="radio" name="program" value="set-of-weight">
+                  <span class="owner-form__signature owner-form__signature-radio">Набор массы</span>
                 </label>
               </li>
-              <li>
-                <label class="owner-form__label">
-                  <input class="visually-hidden" type="radio" name="program" value="need-advice"> Не знаю (нужен ваш совет)
+              <li class="owner-form__item">
+                <label class="owner-form__label owner-form__label-radio">
+                  <input class="visually-hidden owner-form__radio" type="radio" name="program" value="need-advice">
+                  <span class="owner-form__signature owner-form__signature-radio">Не знаю (нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="owner-form__section">
-            <legend class="owner-form__legend">Контактные данные (владельца кота)</legend>
-            <p>
-              <label class="owner-form__label">
-                E-mail:* <input class="owner-form__field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+          <fieldset class="owner-form__section owner-form__section--contacts">
+            <legend class="owner-form__legend owner-form__legend--contacts">Контактные данные (владельца кота)</legend>
+            <p class="owner-form__row">
+              <label class="owner-form__label owner-form__label--email">
+                <span class="owner-form__signature">E-mail:*</span>
+                <input class="owner-form__field owner-form__field--contacts" type="email" name="email" placeholder="kuklachev@gmail.com" required>
               </label>
             </p>
-            <p>
-              <label class="owner-form__label">
-                Телефон:* <input class="owner-form__field" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+            <p class="owner-form__row">
+              <label class="owner-form__label owner-form__label--phone">
+                <span class="owner-form__signature">Телефон:*</span>
+                <input class="owner-form__field owner-form__field--contacts" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
               </label>
             </p>
           </fieldset>
 
-          <fieldset class="owner-form__section">
-            <legend class="owner-form__legend">Комментарий</legend>
+          <fieldset class="owner-form__section owner-form__section--comment">
+            <legend class="owner-form__legend owner-form__legend--comment">Комментарий</legend>
             <textarea class="owner-form__comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="owner-form__section">
-            <legend class="owner-form__legend">Дополнительно</legend>
-            <ul  class="owner-form__list">
-              <li>
+            <legend class="owner-form__legend owner-form__legend--additional">Дополнительно</legend>
+            <ul class="owner-form__list">
+              <li class="owner-form__item">
                 <label class="owner-form__label">
-                  <input class="visually-hidden" type="checkbox" name="sweetener" checked> Сахарозаменитель
+                  <input class="visually-hidden owner-form__checkbox" type="checkbox" name="sweetener" checked>
+                  <span class="owner-form__signature owner-form__signature-checkbox">Сахарозаменитель</span>
                 </label>
               </li>
-              <li>
+              <li class="owner-form__item">
                 <label class="owner-form__label">
-                  <input class="visually-hidden" type="checkbox" name="water"> Питевая вода
+                  <input class="visually-hidden owner-form__checkbox" type="checkbox" name="water">
+                  <span class="owner-form__signature owner-form__signature-checkbox">Питьевая вода</span>
                 </label>
               </li>
-              <li>
+              <li class="owner-form__item">
                 <label class="owner-form__label">
-                  <input class="visually-hidden" type="checkbox" name="milk"> Молоко
+                  <input class="visually-hidden owner-form__checkbox" type="checkbox" name="milk">
+                  <span class="owner-form__signature owner-form__signature-checkbox">Молоко</span>
                 </label>
               </li>
-              <li>
+              <li class="owner-form__item">
                 <label class="owner-form__label">
-                  <input class="visually-hidden" type="checkbox" name="vitamins"> Витамины
+                  <input class="visually-hidden owner-form__checkbox" type="checkbox" name="vitamins">
+                  <span class="owner-form__signature owner-form__signature-checkbox">Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <button class="owner-form__submit button" type="submit">Отправить заявку</button>
+          <div class="owner-form-button-wrapper">
+            <button class="owner-form__submit button button--buy" type="submit">Отправить заявку</button>
+          </div>
+
           <p class="owner-form__footnote">* &mdash; Обязательные поля</p>
 
         </form>
       </section>
 
-      <section class="contacts">
-        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="contacts__address">
-          Ул. Большая<br>
-          Коонюшенная, д. 19/8<br>
-          Санкт-Петербург
-        </address>
-        <div class="contacts__map-container">
-          <img class="contacts__map" src="https://via.placeholder.com/320x360" width="320" heigt="360" alt="Схема проезда">
+      <section class="contacts contacts--innternal">
+        <div class="contacts__inner">
+          <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+          <address class="contacts__address">
+            ул. Большая<br>
+            Конюшенная, д. 19/8<br>
+            Санкт-Петербург
+          </address>
         </div>
+        <div class="contacts__map"></div>
       </section>
     </main>
 
-    <footer class="page-footer">
-      <h2 class="page-footer__title">Cat Energy</h2>
+    <footer class="page-footer container">
+      <p class="page-footer__logo">
+        <a class="page-footer__logo-link" href="index.html">
+          <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+        </a>
+      </p>
       <ul class="page-footer__social-list">
         <li>
           <a href="https://vk.com/catenergy">
-            <img src="https://via.placeholder.com/22x12" width="22" height="12" alt="Мы в vkontakte">
+            <img src="img/icon-vk-mobile.svg" width="22" height="12" alt="Мы в vkontakte">
           </a>
         </li>
         <li>
           <a href="https://instagram.com/catenergy">
-            <img src="https://via.placeholder.com/16x16" width="16" height="16" alt="Мы в instagram">
+            <img src="img/icon-insta-mobile.svg" width="16" height="16" alt="Мы в instagram">
           </a>
         </li>
         <li>
           <a href="https://facebook.com/catenery">
-            <img src="https://via.placeholder.com/10x19" width="10" height="19" alt="Мы в facebook">
+            <img src="img/icon-fb-mobile.svg" width="10" height="19" alt="Мы в facebook">
           </a>
         </li>
       </ul>
-      <div class="page-footer_links">
-        <a href="https://htmlacademy.ru">HTML Academy</a>
+      <div class="page-footer__links">
+        <a class="page-footer__link-academy" href="https://htmlacademy.ru">HTML Academy</a>
         <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Иконка HTMLAcademy">
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Иконка HTMLAcademy">
         </a>
       </div>
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

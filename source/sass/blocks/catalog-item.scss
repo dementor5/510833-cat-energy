@@ -1,0 +1,49 @@
+.catalog-item {
+  padding: 0 20px;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #ededed;
+}
+
+.catalog-item__inner {
+  display: flex;
+  align-items: center;
+}
+
+.catalog-item__description {
+  order: 1;
+  flex-grow: 1;
+}
+
+.catalog-item__name {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.catalog-item__characteristics {
+  width: 100%;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Arial", sans-serif;
+  color: #444444;
+
+  border-collapse: collapse;
+}
+
+.catalog-item__signature,
+.catalog-item__value {
+  padding: 0;
+}
+
+.catalog-item__value {
+  text-align: right;
+}

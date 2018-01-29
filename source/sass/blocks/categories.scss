@@ -1,0 +1,16 @@
+.categories {
+  margin: 0 auto;
+  margin-bottom: 18px;
+  width: calc(100% - 40px);
+}
+
+.categories__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.categories__item:not(:last-child) {
+  margin-bottom: 20px;
+}
