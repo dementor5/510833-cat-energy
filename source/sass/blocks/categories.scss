@@ -1,9 +1,3 @@
-.categories {
-  margin: 0 auto;
-  margin-bottom: 18px;
-  width: calc(100% - 40px);
-}
-
 .categories__list {
   margin: 0;
   padding: 0;
@@ -13,4 +7,10 @@
 
 .categories__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media (min-width: $tablet_width) {
+  .categories__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }

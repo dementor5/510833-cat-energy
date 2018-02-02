@@ -1,14 +1,15 @@
 .live-example {
-  margin-bottom: 29px;
   padding-top: 17px;
-  padding-bottom: 35px;
+  padding-bottom: 36px;
 
   background-color: #f2f2f2;
-}
 
-.live-example__inner {
-  margin-bottom: 35px;
-  padding: 0 20px;
+  @media (min-width: $tablet_width) {
+    padding-top: 44px;
+    padding-bottom: 0;
+
+    background-color: white;
+  }
 }
 
 .live-example__title {
@@ -20,6 +21,13 @@
   line-height: 60px;
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 63px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .live-example__description {
@@ -32,24 +40,51 @@
   line-height: 18px;
   font-family: "Arial", sans-serif;
   color: #444444;
+
+  @media (min-width: $tablet_width) {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-bottom: 53px;
+  }
 }
 
 .live-example__results-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet_width) {
+    flex-wrap: nowrap;
+    margin-bottom: 249px;
+  }
 }
 
 .live-example__result {
   position: relative;
 
   width: 124px;
+  margin-bottom: 34px;
   padding-top: 13px;
   padding-bottom: 17px;
 
   text-align: center;
 
   border: 1px solid #cfcfcf;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 6px;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    width: 162px;
+  }
+
+  &:first-child {
+    @media (min-width: $tablet_width) {
+      margin-right: 42px;
+    }
+  }
 }
 
 .live-example__result-value {
@@ -61,6 +96,11 @@
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: $tablet_width) {
+    font-size: 30px;
+    line-height: 37.02px;
+  }
 }
 
 .live-example__result-description {
@@ -78,16 +118,57 @@
   color: #444444;
 
   background-color: #f2f2f2;
+
+  @media (min-width: $tablet_width) {
+    bottom: -6px;
+    left: 22px;
+
+    width: 116px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: white;
+  }
+
+  &--second {
+    @media (min-width: $tablet_width) {
+      left: 7px;
+
+      width: 144px;
+    }
+  }
 }
 
 .live-example__cost {
-  margin: 0;
+  margin: 0 auto;
 
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
-  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet_width) {
+    align-self: flex-start;
+    margin: 0;
+    margin-top: 7px;
+    margin-left: auto;
+    width: 195px;
+
+    font-size: 20px;
+    line-height: 29px;
+    text-align: right;
+  }
+}
+
+.live-example__slider {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @media (min-width: $tablet_width) {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
 }

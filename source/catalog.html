@@ -8,21 +8,19 @@
   <body>
 
     <header class="page-header container">
-      <nav class="main-nav">
-        <div class="main-nav__head">
-          <a class="main-nav__logo-link" href="index.html">
-            <img class="main-nav__logo" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»">
-            <img class="main-nav__logo-2" src="img/logo-mobile-header.svg" width="101" height="18" alt="Логотип Интернет-магазин «Кэт энерджи»">
-          </a>
-          <button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <button class="main-nav__close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
-        </div>
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image-mobile" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-mobile page-header__logo-image-mobile--second" src="img/logo-mobile-header.svg" width="101" height="18" alt="Логотип Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-tablet" src="img/logo-tablet.png" width="173" height="58px" alt="Логотип Интернет-магазин «Кэт энерджи»">
+      </a>
+      <nav class="main-nav main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__item--active">Каталог продукции</a>
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -31,9 +29,9 @@
       </nav>
     </header>
 
-    <main class="page-catalog container">
+    <main class="page-catalog">
 
-      <section class="catalog">
+      <section class="catalog container">
         <h1 class="catalog__title">Каталог продукции</h1>
 
         <ul class="catalog__list">
@@ -235,7 +233,7 @@
         </footer>
       </section>
 
-      <section class="extra">
+      <section class="extra container">
         <h2 class="extra__title">Дополнительные товары</h2>
 
         <ul class="extra__list">
@@ -291,7 +289,7 @@
         </div>
       </section>
 
-      <section class="contacts contacts--innternal">
+      <section class="contacts contacts--innternal container">
         <div class="contacts__inner">
           <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
           <address class="contacts__address">

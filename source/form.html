@@ -8,15 +8,13 @@
   <body>
 
     <header class="page-header container">
-      <nav class="main-nav">
-        <div class="main-nav__head">
-          <a class="main-nav__logo-link" href="index.html">
-            <img class="main-nav__logo" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»">
-            <img class="main-nav__logo-2" src="img/logo-mobile-header.svg" width="101" height="18" alt="Логотип Интернет-магазин «Кэт энерджи»">
-          </a>
-          <button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <button class="main-nav__close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
-        </div>
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image-mobile" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-mobile page-header__logo-image-mobile--second" src="img/logo-mobile-header.svg" width="101" height="18" alt="Логотип Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-tablet" src="img/logo-tablet.png" width="173" height="58px" alt="Логотип Интернет-магазин «Кэт энерджи»">
+      </a>
+      <nav class="main-nav main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
@@ -24,15 +22,15 @@
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__item--active">Подбор программы</a>
+          <li class="main-nav__item main-nav__item--active">
+            <a class="main-nav__link">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="page-form container">
-      <section class="questionnaire">
+    <main class="page-form">
+      <section class="questionnaire container">
         <h1 class="questionnaire__title">Подбор программы</h1>
         <p class="questionnaire__description">Заполните анкету и мы подберём программу&nbsp;питания для вашего кота</p>
 
@@ -133,16 +131,13 @@
             </ul>
           </fieldset>
 
-          <div class="owner-form-button-wrapper">
-            <button class="owner-form__submit button button--buy" type="submit">Отправить заявку</button>
-          </div>
-
+          <button class="owner-form__submit button button--buy" type="submit">Отправить заявку</button>
           <p class="owner-form__footnote">* &mdash; Обязательные поля</p>
 
         </form>
       </section>
 
-      <section class="contacts contacts--innternal">
+      <section class="contacts contacts--innternal container">
         <div class="contacts__inner">
           <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
           <address class="contacts__address">

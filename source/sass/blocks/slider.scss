@@ -1,3 +1,10 @@
+.slider {
+  @media (min-width: $tablet_width) {
+    background-color: #f2f2f2;
+    min-height: 462px;
+  }
+}
+
 .slider__list {
   margin: 0;
   margin-bottom: 28px;

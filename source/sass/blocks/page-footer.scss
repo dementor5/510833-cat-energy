@@ -1,9 +1,14 @@
 .page-footer {
-  padding: 0 20px;
-  padding-top: 42px;
+  padding-top: 41px;
   padding-bottom: 20px;
 
   background-color: #f2f2f2;
+  @media (min-width: $tablet_width) {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 55px;
+    padding-bottom: 43px;
+  }
 }
 
 .page-footer__logo {
@@ -11,35 +16,78 @@
   margin-bottom: 27px;
 
   text-align: center;
+
+  @media (min-width: $tablet_width) {
+    margin: 0;
+    margin-top: 4px;
+  }
 }
 
 .page-footer__social-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  margin-bottom: 18px;
-  padding: 0 83px;
+  margin-bottom: 22px;
   padding-top: 22px;
-  padding-left: 72px;
+  padding-right: 82px;
+  padding-bottom: 17px;
+  padding-left: 73px;
 
-  border-top: 1px solid #d9d9d9;
   list-style: none;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet_width) {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    padding-right: 137px;
+    padding-left: 156px;
+
+    border: none;
+  }
+}
+
+.page-footer__vk {
+  @media (min-width: $tablet_width) {
+    width: 30px;
+    height: 16px;
+  }
+}
+
+.page-footer__insta {
+  @media (min-width: $tablet_width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.page-footer__fb {
+  @media (min-width: $tablet_width) {
+    width: 14px;
+    height: 28px;
+  }
 }
 
 .page-footer__links {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-top: 18px;
 
-  border-top: 1px solid #d9d9d9;
+  @media (min-width: $tablet_width) {
+    margin-top: 9px;
+  }
 }
 
 .page-footer__link-academy {
+  margin-top: 8px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   font-family: "Arial", sans-serif;
   color: #444444;
+
+  @media (min-width: $tablet_width) {
+    margin-right: 21px;
+  }
 }

@@ -1,6 +1,7 @@
 .advantage {
   position: relative;
-  padding: 3px 0;
+  padding-top: 3px;
+  padding-bottom: 5px;
   padding-left: 80px;
 
   font-weight: 400;
@@ -8,6 +9,16 @@
   line-height: 18px;
   font-family: "Arial", sans-serif;
   color: #444444;
+
+  @media (min-width: $tablet_width) {
+    padding-top: 112px;
+    padding-left: 0;
+    padding-bottom: 45px;
+    width: 265px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &::before,
   &::after {
@@ -17,21 +28,32 @@
   }
 
   &::before {
+    top: 1px;
     left: 0;
-    top: 0;
 
     width: 60px;
     height: 60px;
 
     background-color: $main-green;
+
+    @media (min-width: $tablet_width) {
+      top: 0;
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &::after {
-    top: 5px;
+    top: 6px;
     left: 5px;
 
     width: 50px;
     height: 50px;
+
+    @media (min-width: $tablet_width) {
+      top: 15px;
+      left: 15px;
+    }
   }
 
   &--nutrient::after {
@@ -48,5 +70,47 @@
 
   &--time::after {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+.advantage__number {
+  display: none;
+
+  @media (min-width: $tablet_width) {
+    position: absolute;
+    top: -39px;
+    z-index: -1;
+
+    display: inline;
+
+    font-weight: 400;
+    font-size: 281.07px;
+    line-height: 281.07px;
+    font-family: "Oswald", "Arial", sans-serif;
+    color: #f2f2f2;
+  }
+}
+
+.advantage--nutrient .advantage__number {
+  @media (min-width: $tablet_width) {
+    right: 36px;
+  }
+}
+
+.advantage--powder .advantage__number {
+  @media (min-width: $tablet_width) {
+    right: 20px;
+  }
+}
+
+.advantage--food .advantage__number {
+  @media (min-width: $tablet_width) {
+    right: 18px;
+  }
+}
+
+.advantage--time .advantage__number {
+  @media (min-width: $tablet_width) {
+    right: 16px;
   }
 }
