@@ -32,7 +32,7 @@
     <main class="page-form">
       <section class="questionnaire container">
         <h1 class="questionnaire__title">Подбор программы</h1>
-        <p class="questionnaire__description">Заполните анкету и мы подберём программу&nbsp;питания для вашего кота</p>
+        <p class="questionnaire__description">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</p>
 
         <form class="questionnaire__form owner-form" action="https://echo.htmlacademy.ru" method="post">
 
@@ -58,7 +58,7 @@
                 </label>
               </p>
             </div>
-            <ul class="owner-form__list">
+            <ul class="owner-form__list owner-form__list--bordered">
               <li class="owner-form__item">
                 <label class="owner-form__label owner-form__label-radio">
                   <input class="visually-hidden owner-form__radio" type="radio" name="program" value="weight-loss" checked>
@@ -103,26 +103,26 @@
 
           <fieldset class="owner-form__section">
             <legend class="owner-form__legend owner-form__legend--additional">Дополнительно</legend>
-            <ul class="owner-form__list">
-              <li class="owner-form__item">
+            <ul class="owner-form__list owner-form__list--divided">
+              <li class="owner-form__item owner-form__item--divided">
                 <label class="owner-form__label">
                   <input class="visually-hidden owner-form__checkbox" type="checkbox" name="sweetener" checked>
                   <span class="owner-form__signature owner-form__signature-checkbox">Сахарозаменитель</span>
                 </label>
               </li>
-              <li class="owner-form__item">
+              <li class="owner-form__item owner-form__item--divided">
                 <label class="owner-form__label">
                   <input class="visually-hidden owner-form__checkbox" type="checkbox" name="water">
                   <span class="owner-form__signature owner-form__signature-checkbox">Питьевая вода</span>
                 </label>
               </li>
-              <li class="owner-form__item">
+              <li class="owner-form__item owner-form__item--divided">
                 <label class="owner-form__label">
                   <input class="visually-hidden owner-form__checkbox" type="checkbox" name="milk">
                   <span class="owner-form__signature owner-form__signature-checkbox">Молоко</span>
                 </label>
               </li>
-              <li class="owner-form__item">
+              <li class="owner-form__item owner-form__item--divided">
                 <label class="owner-form__label">
                   <input class="visually-hidden owner-form__checkbox" type="checkbox" name="vitamins">
                   <span class="owner-form__signature owner-form__signature-checkbox">Витамины</span>
@@ -131,8 +131,10 @@
             </ul>
           </fieldset>
 
+          <div class="owner-form__button-wrapper">
           <button class="owner-form__submit button button--buy" type="submit">Отправить заявку</button>
           <p class="owner-form__footnote">* &mdash; Обязательные поля</p>
+          </div>
 
         </form>
       </section>
@@ -141,9 +143,9 @@
         <div class="contacts__inner">
           <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
           <address class="contacts__address">
-            ул. Большая<br>
-            Конюшенная, д. 19/8<br>
-            Санкт-Петербург
+            <p class="contacts__street">ул. Большая<br>
+            Конюшенная, д. 19/8<br></p>
+            <p class="contacts__city">Санкт-Петербург</p>
           </address>
         </div>
         <div class="contacts__map"></div>
@@ -159,17 +161,17 @@
       <ul class="page-footer__social-list">
         <li>
           <a href="https://vk.com/catenergy">
-            <img src="img/icon-vk-mobile.svg" width="22" height="12" alt="Мы в vkontakte">
+            <img class="page-footer__vk" src="img/icon-vk-mobile.svg" width="22" height="12" alt="Мы в vkontakte">
           </a>
         </li>
         <li>
           <a href="https://instagram.com/catenergy">
-            <img src="img/icon-insta-mobile.svg" width="16" height="16" alt="Мы в instagram">
+            <img class="page-footer__insta" src="img/icon-insta-mobile.svg" width="16" height="16" alt="Мы в instagram">
           </a>
         </li>
         <li>
           <a href="https://facebook.com/catenery">
-            <img src="img/icon-fb-mobile.svg" width="10" height="19" alt="Мы в facebook">
+            <img class="page-footer__fb" src="img/icon-fb-mobile.svg" width="10" height="19" alt="Мы в facebook">
           </a>
         </li>
       </ul>

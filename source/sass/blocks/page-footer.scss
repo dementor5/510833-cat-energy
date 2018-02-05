@@ -3,11 +3,18 @@
   padding-bottom: 20px;
 
   background-color: #f2f2f2;
+
   @media (min-width: $tablet_width) {
     display: flex;
     align-items: flex-start;
     padding-top: 55px;
     padding-bottom: 43px;
+  }
+
+  &--internal {
+    @media (min-width: $tablet_width) {
+      padding-top: 59px;
+    }
   }
 }
 

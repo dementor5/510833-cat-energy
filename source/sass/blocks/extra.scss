@@ -1,14 +1,18 @@
 .extra {
-  padding: 0 20px;
-  padding-top: 27px;
+  padding-top: 28px;
   padding-bottom: 35px;
 
-  border-top: 1px solid #ededed;
+  @media (min-width: $tablet_width) {
+    padding-top: 67px;
+    padding-bottom: 76px;
+  }
 }
 
 .extra__title {
+  position: relative;
+
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   font-weight: 400;
   font-size: 24px;
@@ -16,7 +20,46 @@
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
 
-  @include long-line(15px, -20px, 53px);
+  @media (min-width: $tablet_width) {
+    margin-bottom: 80px;
+    padding: 0 36px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &::before {
+    @media (min-width: $tablet_width) {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: -30px;
+
+      width: 28px;
+      height: 3px;
+
+      background-color: $main_green;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -20px;
+
+    width: 53px;
+    height: 3px;
+
+    background-color: $main_green;
+
+    @media (min-width: $tablet_width) {
+      top: 22px;
+      right: -30px;
+
+      width: 327px;
+    }
+  }
 }
 
 .extra__list {
@@ -26,7 +69,14 @@
 
   list-style: none;
 
+  border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 69px;
+
+    border: 1px solid #e6e6e6;
+  }
 }
 
 .extra__event-container {
@@ -39,6 +89,19 @@
 
   background-image: url("../img/gift-photo-mobile@1x.jpg");
 
+  @media (min-width: $tablet_width) {
+    width: 708px;
+    height: 200px;
+    padding-top: 72px;
+    padding-right: 0;
+    padding-left: 421px;
+
+    background-position: 0 -350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #e6e6e6;
+  }
+
   &::before {
     content: "";
 
@@ -49,6 +112,11 @@
     width: 55px;
     height: 60px;
     background-image: url("../img/icon-gift.svg");
+
+    @media (min-width: $tablet_width) {
+      top: 65px;
+      left: 90px;
+    }
   }
 }
 
@@ -61,4 +129,11 @@
   font-family: "Arial", sans-serif;
   color: white;
   text-align: center;
+
+  @media (min-width: $tablet_width) {
+    width: 170px;
+
+    line-height: 19px;
+    text-align: left;
+  }
 }
