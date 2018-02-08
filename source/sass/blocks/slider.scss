@@ -1,7 +1,14 @@
 .slider {
   @media (min-width: $tablet_width) {
-    background-color: #f2f2f2;
     min-height: 462px;
+
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: $desktop_width) {
+    min-height: 0;
+
+    background-color: inherit;
   }
 }
 

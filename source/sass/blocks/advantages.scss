@@ -8,6 +8,10 @@
 
     border-bottom: 1px solid #e6e6e6;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 73px;
+  }
 }
 
 .advantages__title {
@@ -39,6 +43,10 @@
     justify-content: space-between;
     padding-right: 59px;
   }
+
+  @media (min-width: $desktop_width) {
+    padding-right: 0;
+  }
 }
 
 .advantages__item:not(:last-child) {
@@ -49,8 +57,12 @@
   }
 }
 
-.advantages__item:not(:nth-last-child(-n + 2)) {
+.advantages__item:nth-last-child(n + 3) {
   @media (min-width: $tablet-width) {
     margin-bottom: 88px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 0;
   }
 }

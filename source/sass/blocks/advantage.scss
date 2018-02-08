@@ -20,6 +20,10 @@
     line-height: 24px;
   }
 
+  @media (min-width: $desktop_width) {
+    width: 245px;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -88,29 +92,30 @@
     line-height: 281.07px;
     font-family: "Oswald", "Arial", sans-serif;
     color: #f2f2f2;
+    // color: red;
   }
 }
 
 .advantage--nutrient .advantage__number {
   @media (min-width: $tablet_width) {
-    right: 36px;
+    left: 118px;
   }
 }
 
 .advantage--powder .advantage__number {
   @media (min-width: $tablet_width) {
-    right: 20px;
+    left: 111px;
   }
 }
 
 .advantage--food .advantage__number {
   @media (min-width: $tablet_width) {
-    right: 18px;
+    left: 113px;
   }
 }
 
 .advantage--time .advantage__number {
   @media (min-width: $tablet_width) {
-    right: 16px;
+    left: 113px;
   }
 }

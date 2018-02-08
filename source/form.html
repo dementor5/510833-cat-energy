@@ -9,9 +9,10 @@
 
     <header class="page-header container">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image-mobile" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»">
-        <img class="page-header__logo-image-mobile page-header__logo-image-mobile--second" src="img/logo-mobile-header.svg" width="101" height="18" alt="Логотип Интернет-магазин «Кэт энерджи»">
-        <img class="page-header__logo-image-tablet" src="img/logo-tablet.png" width="173" height="58px" alt="Логотип Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-mobile page-header__logo-image-mobile--first" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-mobile page-header__logo-image-mobile--second" src="img/logo-mobile-header.svg" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-tablet" src="img/logo-tablet.png" width="173" height="58" alt="Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-desktop" src="img/logo-desktop.png" width="202" height="59" alt="Интернет-магазин «Кэт энерджи»">
       </a>
       <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -38,62 +39,66 @@
 
           <fieldset class="owner-form__section owner-form__section--about-cat">
             <legend class="visually-hidden">Информация о коте</legend>
-            <div class="owner-form__about-cat-inner">
-              <p class="owner-form__row">
-                <label class="owner-form__label">
-                  <span class="owner-form__signature">Имя:*</span>
-                  <input class="owner-form__field" type="text" name="name" placeholder="Барсик" required>
-                </label>
-              </p>
-              <p class="owner-form__row">
-                <label class="owner-form__label">
-                  <span class="owner-form__signature">Вес (кг):*</span>
-                  <input class="owner-form__field" type="number" name="weight" placeholder="7" min="0" required>
-                </label>
-              </p>
-              <p class="owner-form__row">
-                <label class="owner-form__label">
-                  <span class="owner-form__signature">Возраст&nbsp;(лет):</span>
-                  <input class="owner-form__field" type="number" name="age" placeholder="7" min="0">
-                </label>
-              </p>
+            <div class="owner-form__section-inner">
+              <div class="owner-form__about-cat-inner">
+                <p class="owner-form__row">
+                  <label class="owner-form__label">
+                    <span class="owner-form__signature">Имя:*</span>
+                    <input class="owner-form__field" type="text" name="name" placeholder="Барсик" required>
+                  </label>
+                </p>
+                <p class="owner-form__row">
+                  <label class="owner-form__label">
+                    <span class="owner-form__signature">Вес (кг):*</span>
+                    <input class="owner-form__field" type="number" name="weight" placeholder="7" min="0" required>
+                  </label>
+                </p>
+                <p class="owner-form__row">
+                  <label class="owner-form__label">
+                    <span class="owner-form__signature">Возраст&nbsp;(лет):</span>
+                    <input class="owner-form__field" type="number" name="age" placeholder="7" min="0">
+                  </label>
+                </p>
+              </div>
+              <ul class="owner-form__list owner-form__list--bordered">
+                <li class="owner-form__item">
+                  <label class="owner-form__label owner-form__label-radio">
+                    <input class="visually-hidden owner-form__radio" type="radio" name="program" value="weight-loss" checked>
+                    <span class="owner-form__signature owner-form__signature-radio">Похудение</span>
+                  </label>
+                </li>
+                <li class="owner-form__item">
+                  <label class="owner-form__label  owner-form__label-radio">
+                    <input class="visually-hidden owner-form__radio" type="radio" name="program" value="set-of-weight">
+                    <span class="owner-form__signature owner-form__signature-radio">Набор массы</span>
+                  </label>
+                </li>
+                <li class="owner-form__item">
+                  <label class="owner-form__label owner-form__label-radio">
+                    <input class="visually-hidden owner-form__radio" type="radio" name="program" value="need-advice">
+                    <span class="owner-form__signature owner-form__signature-radio">Не знаю (нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
             </div>
-            <ul class="owner-form__list owner-form__list--bordered">
-              <li class="owner-form__item">
-                <label class="owner-form__label owner-form__label-radio">
-                  <input class="visually-hidden owner-form__radio" type="radio" name="program" value="weight-loss" checked>
-                  <span class="owner-form__signature owner-form__signature-radio">Похудение</span>
-                </label>
-              </li>
-              <li class="owner-form__item">
-                <label class="owner-form__label  owner-form__label-radio">
-                  <input class="visually-hidden owner-form__radio" type="radio" name="program" value="set-of-weight">
-                  <span class="owner-form__signature owner-form__signature-radio">Набор массы</span>
-                </label>
-              </li>
-              <li class="owner-form__item">
-                <label class="owner-form__label owner-form__label-radio">
-                  <input class="visually-hidden owner-form__radio" type="radio" name="program" value="need-advice">
-                  <span class="owner-form__signature owner-form__signature-radio">Не знаю (нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
           </fieldset>
 
           <fieldset class="owner-form__section owner-form__section--contacts">
             <legend class="owner-form__legend owner-form__legend--contacts">Контактные данные (владельца кота)</legend>
-            <p class="owner-form__row">
-              <label class="owner-form__label owner-form__label--email">
-                <span class="owner-form__signature">E-mail:*</span>
-                <input class="owner-form__field owner-form__field--contacts" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-              </label>
-            </p>
-            <p class="owner-form__row">
-              <label class="owner-form__label owner-form__label--phone">
-                <span class="owner-form__signature">Телефон:*</span>
-                <input class="owner-form__field owner-form__field--contacts" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-              </label>
-            </p>
+            <div class="owner-form__section-inner">
+              <p class="owner-form__row owner-form__row--email">
+                <label class="owner-form__label owner-form__label--email">
+                  <span class="owner-form__signature">E-mail:*</span>
+                  <input class="owner-form__field owner-form__field--contacts" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                </label>
+              </p>
+              <p class="owner-form__row owner-form__row--phone">
+                <label class="owner-form__label owner-form__label--phone">
+                  <span class="owner-form__signature">Телефон:*</span>
+                  <input class="owner-form__field owner-form__field--contacts" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                </label>
+              </p>
+            </div>
           </fieldset>
 
           <fieldset class="owner-form__section owner-form__section--comment">

@@ -13,6 +13,22 @@
     padding-bottom: 62px;
   }
 
+  @media (min-width: $desktop_width) {
+    width: 570px;
+    padding-right: 25px;
+    padding-left: 52px;
+  }
+
+  &--pro {
+    @media (min-width: $tablet_width) {
+      padding-right: 315px;
+    }
+
+    @media (min-width: $desktop_width) {
+      padding-right: 25px;
+    }
+  }
+
   &::before,
   &::after {
     content: "";
@@ -38,11 +54,14 @@
       width: 200px;
       height: 200px;
     }
-  }
 
-  &--pro {
-    @media (min-width: $tablet_width) {
-      padding-right: 315px;
+    @media (min-width: $desktop_width) {
+      top: 47px;
+      right: auto;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
     }
   }
 
@@ -51,23 +70,10 @@
       top: 91px;
       right: 60px;
     }
-  }
 
-  &--pro::after {
-    top: 35px;
-    left: 13px;
-
-    width: 67px;
-    height: 28px;
-
-    background-image: url("../img/icon-cat-pro.svg");
-
-    @media (min-width: $tablet_width) {
-      top: 135px;
-      right: 28px;
-      left: auto;
-      width: 268px;
-      height: 112px;
+    @media (min-width: $desktop_width) {
+      top: 47px;
+      right: auto;
     }
   }
 
@@ -87,6 +93,44 @@
 
       width: 140px;
       height: 194px;
+    }
+
+    @media (min-width: $desktop_width) {
+      top: 41px;
+      right: auto;
+      left: 66px;
+
+      width: 79px;
+      height: 97px;
+
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--pro::after {
+    top: 35px;
+    left: 13px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+
+    @media (min-width: $tablet_width) {
+      top: 135px;
+      right: 28px;
+      left: auto;
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: $desktop_width) {
+      top: 69px;
+      right: auto;
+      left: 34px;
+
+      width: 134px;
+      height: 56px;
     }
   }
 }
@@ -110,6 +154,11 @@
     font-size: 36px;
     line-height: 37.02px;
   }
+
+  @media (min-width: $desktop_width) {
+    margin-left: 162px;
+    margin-bottom: 74px;
+  }
 }
 
 .product__description {
@@ -132,6 +181,10 @@
     line-height: 24px;
 
     border: none;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 9px;
   }
 }
 

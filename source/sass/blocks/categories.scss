@@ -3,14 +3,23 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $desktop_width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.categories__item:not(:last-child) {
-  margin-bottom: 20px;
-}
+.categories__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
 
-@media (min-width: $tablet_width) {
-  .categories__item:not(:last-child) {
-    margin-bottom: 30px;
+    @media (min-width: $tablet_width) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-bottom: 0;
+    }
   }
 }

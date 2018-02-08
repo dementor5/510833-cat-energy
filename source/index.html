@@ -6,14 +6,14 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-
-    <header class="page-header container">
+    <header class="page-header page-header--main-page container">
       <a class="page-header__logo">
-        <img class="page-header__logo-image-mobile" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип Интернет-магазин «Кэт энерджи»">
-        <img class="page-header__logo-image-mobile page-header__logo-image-mobile--second" src="img/logo-mobile-header.svg" width="101" height="18" alt="Логотип Интернет-магазин «Кэт энерджи»">
-        <img class="page-header__logo-image-tablet" src="img/logo-tablet.png" width="173" height="58px" alt="Логотип Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-mobile page-header__logo-image-mobile--first" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-mobile page-header__logo-image-mobile--second" src="img/logo-mobile-header.svg" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-tablet" src="img/logo-tablet.png" width="173" height="58" alt="Интернет-магазин «Кэт энерджи»">
+        <img class="page-header__logo-image-desktop" src="img/logo-desktop.png" width="202" height="59" alt="Интернет-магазин «Кэт энерджи»">
       </a>
-      <nav class="main-nav main-nav--nojs">
+      <nav class="main-nav main-nav--nojs main-nav--main-page">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
@@ -37,9 +37,7 @@
         <div class="first-screen__wrapper">
           <h2 class="first-screen__title">Функциональное питание для котов</h2>
           <p class="first-screen__slogan">Занялся собой? Займись котом!</p>
-          <p class="first-screen__image-wrapper">
-            <img class="first-screen__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Фотография продукта Cat Energy «Курица»">
-          </p>
+          <img class="first-screen__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Фотография продукта Cat Energy «Курица»">
           <a class="first-screen__link button" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -84,37 +82,44 @@
 
       <section class="live-example container">
         <h2 class="live-example__title">Живой пример</h2>
-        <p class="live-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="live-example__results-wrapper">
-            <div class="live-example__result">
-              <p class="live-example__result-value">5 кг</p>
-              <p class="live-example__result-description">снижение веса</p>
+        <div class="live-example__wrapper">
+          <div class="live-example__description-wrapper">
+            <p class="live-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="live-example__results-wrapper">
+              <div class="live-example__result">
+                <p class="live-example__result-value">5 кг</p>
+                <p class="live-example__result-description">снижение веса</p>
+              </div>
+              <div class="live-example__result">
+                <p class="live-example__result-value">60 дней</p>
+                <p class="live-example__result-description live-example__result-description--second">затрачено времени</p>
+              </div>
+              <div class="live-example__cost">
+                <p class="live-example__cost-item live-example__cost-item--description">Затраты на питание:</p>
+                <p class="live-example__cost-item live-example__cost-item---value">15 000 руб.</p>
+              </div>
             </div>
-            <div class="live-example__result">
-              <p class="live-example__result-value">60 дней</p>
-              <p class="live-example__result-description live-example__result-description--second">затрачено времени</p>
-            </div>
-            <p class="live-example__cost">Затраты на питание: 15 000 руб.</p>
           </div>
-        <div class="live-example__slider slider">
-          <input class="visually-hidden slider__btn-1" id="slider__btn-1" type="radio" name="slider-btn" checked>
-          <input class="visually-hidden slider__btn-2" id="slider__btn-2" type="radio" name="slider-btn">
-          <ul class="slider__list">
-            <li class="slider__slide slider__slide-1">
-              <img src="img/before-mobile@1x.png" width="320" height="240" alt="Фото кота - Бориса">
-            </li>
-            <li class="slider__slide slider__slide-2">
-              <img src="img/after-mobile@1x.png" width="320" height="240" alt="Фото кота - Бориса">
-            </li>
-          </ul>
-          <div class="slider__controls">
-            Было
-            <div class="slider__switch-case">
-              <div class="slider__switch"></div>
-              <label class="slider__label" for="slider__btn-1"></label>
-              <label class="slider__label" for="slider__btn-2"></label>
+          <div class="live-example__slider slider">
+            <input class="visually-hidden slider__btn-1" id="slider__btn-1" type="radio" name="slider-btn" checked>
+            <input class="visually-hidden slider__btn-2" id="slider__btn-2" type="radio" name="slider-btn">
+            <ul class="slider__list">
+              <li class="slider__slide slider__slide-1">
+                <img src="img/before-mobile@1x.png" width="320" height="240" alt="Фото кота - Бориса">
+              </li>
+              <li class="slider__slide slider__slide-2">
+                <img src="img/after-mobile@1x.png" width="320" height="240" alt="Фото кота - Бориса">
+              </li>
+            </ul>
+            <div class="slider__controls">
+              Было
+              <div class="slider__switch-case">
+                <div class="slider__switch"></div>
+                <label class="slider__label" for="slider__btn-1"></label>
+                <label class="slider__label" for="slider__btn-2"></label>
+              </div>
+              Стало
             </div>
-            Стало
           </div>
         </div>
       </section>
