@@ -26,12 +26,18 @@
   }
 
   @media (min-width: $desktop_width) {
-    padding-bottom: 53px;
+    padding-top: 61px;
+    padding-bottom: 51px;
   }
 
   &--internal {
     @media (min-width: $tablet_width) {
       padding-top: 59px;
+    }
+
+    @media (min-width: $desktop_width) {
+      padding-top: 59px;
+      padding-bottom: 53px;
     }
   }
 }
