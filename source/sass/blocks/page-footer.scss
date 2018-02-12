@@ -1,8 +1,21 @@
 .page-footer {
-  padding-top: 41px;
-  padding-bottom: 20px;
+  max-width: $mobile-width;
+  margin: 0 auto;
 
   background-color: #f2f2f2;
+
+  @media (min-width: $tablet_width) {
+    max-width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $max-width;
+  }
+}
+
+.page-footer__wrapper {
+  padding-top: 41px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet_width) {
     display: flex;

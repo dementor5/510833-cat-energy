@@ -32,6 +32,10 @@ html {
 
 body {
   min-width: 320px;
+
+  @media (min-width: $mobile_width) {
+    overflow-x: hidden;
+  }
 }
 
 img {

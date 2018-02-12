@@ -72,8 +72,61 @@
   position: relative;
 
   width: 100%;
-  margin-right: -20px;
-  margin-bottom: 35px;
+
+  &--contacts {
+    margin-bottom: 29px;
+
+    @media (min-width: $tablet_width) {
+      margin-bottom: 71px;
+    }
+  }
+
+  &--comment {
+    margin-bottom: 32px;
+
+    @media (min-width: $tablet_width) {
+      margin-bottom: 74px;
+    }
+  }
+
+  &--additional {
+    margin-bottom: 32px;
+
+    @media (min-width: $tablet_width) {
+      margin-bottom: 54px;
+    }
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 14px;
+    right: 0;
+    left: 0;
+    z-index: -2;
+
+    height: 3px;
+    margin-right: -20px;
+
+    background-color: $main_green;
+
+    @media (min-width: $tablet_width) {
+      top: 22px;
+
+    margin-right: -70px;
+    margin-left: -70px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-right: -110px;
+      margin-left: -110px;
+    }
+  }
+}
+
+.owner-form__legend-text {
+  position: relative;
 
   font-weight: 400;
   font-size: 24px;
@@ -82,52 +135,36 @@
   color: #111111;
 
   @media (min-width: $tablet_width) {
-    margin-right: 0 -40px;
-    margin-bottom: 73px;
-
     font-size: 36px;
     line-height: 36px;
   }
 
-  &::after {
+  &::before {
     content: "";
 
     position: absolute;
-    top: 14px;
-    left: 0;
+    top: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
     z-index: -1;
 
-    height: 3px;
+    margin-right: -23px;
 
-    background-color: $main_green;
+    background-color: white;
 
     @media (min-width: $tablet_width) {
-      top: 22px;
+      margin-right: -40px;
+      margin-left: -40px;
     }
   }
 
-  &--comment {
+  &--contacts::before {
+    margin-right: -47px;
+
     @media (min-width: $tablet_width) {
-      margin-bottom: 76px;
+      margin-right: -41px;
     }
-  }
-
-  &--additional {
-    @media (min-width: $tablet_width) {
-      margin-bottom: 56px;
-    }
-  }
-}
-
-.owner-form__legend-text {
-  padding-right: 22px;
-
-  background-color: white;
-  outline: 1px solid red;
-
-  @media (min-width: $tablet_width) {
-    padding-right: 40px;
   }
 }
 
