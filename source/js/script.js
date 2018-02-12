@@ -1,34 +1,41 @@
-var btnOpen = document.querySelector(".main-nav__open");
-var btnClose = document.querySelector(".main-nav__close");
-var menu = document.querySelector(".main-nav__list");
+var btnSelector = "main-nav__toggle";
+var menuSelector ="main-nav";
+var menuShowSelector = "main-nav--show";
+var menuCheckJSSelector = "main-nav--nojs";
+
+var btn = document.querySelector("." + btnSelector);
+var menu = document.querySelector("." + menuSelector);
+
+menu.classList.remove(menuCheckJSSelector);
 
 function openMenu () {
-  btnOpen.classList.add("main-nav__open--hide");
-  btnClose.classList.add("main-nav__close--show");
-  menu.classList.add("main-nav__list--show");
+  menu.classList.add(menuShowSelector);
 }
 
 function closeMenu() {
-  btnOpen.classList.remove("main-nav__open--hide");
-  btnClose.classList.remove("main-nav__close--show");
-  menu.classList.remove("main-nav__list--show");
+  menu.classList.remove(menuShowSelector);
 }
 
-btnOpen.addEventListener("click", function (evt) {
+btn.addEventListener("click", function (evt) {
   evt.preventDefault();
-  openMenu();
-});
-
-btnClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  closeMenu();
+  if (menu.classList.contains(menuShowSelector)) {
+    closeMenu()
+  } else {
+    openMenu();
+  }
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (menu.classList.contains("main-nav__list--show")) {
+    if (menu.classList.contains(menuShowSelector)) {
       closeMenu();
     }
+  }
+});
+
+document.querySelector("body").addEventListener("click", function(evt) {
+  if(menu.classList.contains(menuShowSelector) && !menu.contains(evt.target)) {
+    closeMenu();
   }
 });
 

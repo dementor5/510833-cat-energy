@@ -1,16 +1,25 @@
-.categories {
-  margin: 0 auto;
-  margin-bottom: 18px;
-  width: calc(100% - 40px);
-}
-
 .categories__list {
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $desktop_width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.categories__item:not(:last-child) {
-  margin-bottom: 20px;
+.categories__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet_width) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-bottom: 0;
+    }
+  }
 }

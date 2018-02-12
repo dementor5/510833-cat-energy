@@ -2,7 +2,45 @@
   padding-top: 14px;
   padding-bottom: 16px;
 
-  border-top: 1px solid #cdcdcd;
+  @media (min-width: $tablet_width) {
+    padding: 0 37px;
+    padding-top: 26px;
+    padding-bottom: 27px;
+  }
+
+  @media (min-width: $desktop_width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 16px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #cdcdcd;
+
+    @media (min-width: $tablet_width) {
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    @media (min-width: $desktop_width) {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+}
+
+.extra-item__wrapper {
+  @media (min-width: $tablet_width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 0;
+    width: 645px;
+  }
 }
 
 .extra-item__title {
@@ -15,6 +53,16 @@
   font-family: "Oswald", "Arial", sans-serif;
   color: #222222;
   text-transform: uppercase;
+
+  @media (min-width: $tablet_width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin: 0;
+    padding-top: 2px;
+  }
 }
 
 .extra-item__characteristics {
@@ -28,14 +76,56 @@
   color: #444444;
 
   border-collapse: collapse;
+
+  @media (min-width: $tablet_width) {
+    width: auto;
+    margin-top: 3px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
 }
 
 .extra-item__signature,
 .extra-item__value {
   padding: 0;
+  vertical-align: bottom;
+}
+
+.extra-item__signature {
+  @media (min-width: $tablet_width) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 244px;
+
+    text-align: left;
+  }
 }
 
 .extra-item__value {
   text-align: right;
   text-transform: uppercase;
+
+  @media (min-width: $tablet_width) {
+    width: 95px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 77px;
+
+    text-align: left;
+  }
+}
+
+.extra__button {
+  @media (min-width: $desktop_width) {
+    width: 245px;
+  }
 }

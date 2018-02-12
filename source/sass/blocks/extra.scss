@@ -1,14 +1,23 @@
 .extra {
-  padding: 0 20px;
-  padding-top: 27px;
+  padding-top: 28px;
   padding-bottom: 35px;
 
-  border-top: 1px solid #ededed;
+  @media (min-width: $tablet_width) {
+    padding-top: 67px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 76px;
+    padding-bottom: 86px;
+  }
 }
 
 .extra__title {
+  position: relative;
+
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   font-weight: 400;
   font-size: 24px;
@@ -16,7 +25,79 @@
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
 
-  @include long-line(15px, -20px, 53px);
+  @media (min-width: $tablet_width) {
+    margin: 0 37px;
+    margin-bottom: 80px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin: 0;
+    margin-bottom: 80px;
+    padding: 0;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 15px;
+    right: 0;
+    left: 0;
+    z-index: -2;
+
+    height: 3px;
+    margin-right: -20px;
+
+    background-color: $main_green;
+
+    @media (min-width: $tablet_width) {
+      top: 22px;
+
+      margin-left: -67px;
+      margin-right: -67px;
+    }
+
+    @media (min-width: $desktop_width) {
+      top: 22px;
+
+      margin-left: -116px;
+      margin-right: -110px;
+    }
+  }
+}
+
+.extra__title-text {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    margin-right: -22px;
+
+    background-color: white;
+
+    @media (min-width: $tablet_width) {
+      margin-left: -39px;
+      margin-right: -37px;
+    }
+  }
+}
+
+.extra__wrapper {
+  @media (min-width: $desktop_width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .extra__list {
@@ -26,7 +107,24 @@
 
   list-style: none;
 
+  border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 69px;
+
+    border: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 895px;
+    margin: 0;
+    padding-left: 2px;
+
+    border: none;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .extra__event-container {
@@ -39,16 +137,50 @@
 
   background-image: url("../img/gift-photo-mobile@1x.jpg");
 
+  @media (min-width: $tablet_width) {
+    width: 708px;
+    height: 200px;
+    padding-top: 72px;
+    padding-right: 0;
+    padding-left: 421px;
+
+    background-position: 0 -350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 245px;
+    height: 289px;
+    padding: 0;
+    padding-top: 186px;
+
+    background-position: center;
+  }
+
   &::before {
     content: "";
 
     position: absolute;
     top: 65px;
-    left: 113px;
+    left: 50%;
 
     width: 55px;
     height: 60px;
+    margin-left: -27.5px;
+
     background-image: url("../img/icon-gift.svg");
+
+    @media (min-width: $tablet_width) {
+      top: 65px;
+      left: 90px;
+    }
+
+    @media (min-width: $tablet_width) {
+      left: 50%;
+      margin-left: -27.5px;
+    }
   }
 }
 
@@ -61,4 +193,17 @@
   font-family: "Arial", sans-serif;
   color: white;
   text-align: center;
+
+  @media (min-width: $tablet_width) {
+    width: 170px;
+
+    line-height: 19px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin: 0 auto;
+
+    text-align: center;
+  }
 }

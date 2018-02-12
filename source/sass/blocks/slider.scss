@@ -1,3 +1,17 @@
+.slider {
+  @media (min-width: $tablet_width) {
+    min-height: 462px;
+
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: $desktop_width) {
+    min-height: 0;
+
+    background-color: inherit;
+  }
+}
+
 .slider__list {
   margin: 0;
   margin-bottom: 28px;

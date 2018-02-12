@@ -1,14 +1,19 @@
 .live-example {
-  margin-bottom: 29px;
   padding-top: 17px;
-  padding-bottom: 35px;
+  padding-bottom: 36px;
 
   background-color: #f2f2f2;
-}
 
-.live-example__inner {
-  margin-bottom: 35px;
-  padding: 0 20px;
+  @media (min-width: $tablet_width) {
+    padding-top: 44px;
+    padding-bottom: 0;
+
+    background-color: inherit;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 23px;
+  }
 }
 
 .live-example__title {
@@ -20,6 +25,36 @@
   line-height: 60px;
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 63px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-bottom: 12px;
+  }
+}
+
+.live-example__wrapper {
+  @media (min-width: $desktop_width) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -110px;
+    padding: 0 110px;
+    padding-top: 71px;
+    padding-bottom: 64px;
+
+    background-color: #f2f2f2;
+  }
+}
+
+.live-example__description-wrapper {
+  @media (min-width: $desktop_width) {
+    width: 435px;
+  }
 }
 
 .live-example__description {
@@ -32,24 +67,66 @@
   line-height: 18px;
   font-family: "Arial", sans-serif;
   color: #444444;
+
+  @media (min-width: $tablet_width) {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 68px;
+    padding-right: 0;
+  }
 }
 
 .live-example__results-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet_width) {
+    flex-wrap: nowrap;
+    margin-bottom: 249px;
+  }
+
+  @media (min-width: $desktop_width) {
+    flex-wrap: wrap;
+    width: 366px;
+    margin-bottom: 0;
+  }
 }
 
 .live-example__result {
   position: relative;
 
   width: 124px;
+  margin-bottom: 33px;
   padding-top: 13px;
-  padding-bottom: 17px;
+  padding-bottom: 18px;
 
   text-align: center;
 
   border: 1px solid #cfcfcf;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 6px;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    width: 162px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 60px;
+  }
+
+  &:first-child {
+    @media (min-width: $tablet_width) {
+      margin-right: 42px;
+    }
+  }
 }
 
 .live-example__result-value {
@@ -61,6 +138,11 @@
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: $tablet_width) {
+    font-size: 30px;
+    line-height: 37.02px;
+  }
 }
 
 .live-example__result-description {
@@ -78,16 +160,89 @@
   color: #444444;
 
   background-color: #f2f2f2;
+
+  @media (min-width: $tablet_width) {
+    bottom: -6px;
+    left: 22px;
+
+    width: 116px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: white;
+  }
+
+  @media (min-width: $desktop_width) {
+    background-color: #f2f2f2;
+  }
+
+  &--second {
+    @media (min-width: $tablet_width) {
+      left: 7px;
+
+      width: 144px;
+    }
+  }
 }
 
 .live-example__cost {
-  margin: 0;
+  display: flex;
+  margin: 0 auto;
 
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
-  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet_width) {
+    align-self: flex-start;
+    flex-direction: column;
+    width: 195px;
+    margin: 0;
+    padding-top: 11px;
+    margin-left: auto;
+
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop_width) {
+    flex-grow: 1;
+    flex-direction: row;
+    margin-left: 0;
+    padding-top: 0;
+  }
+}
+
+.live-example__cost-item {
+  margin: 0;
+
+  &--description {
+    margin-right: 3px;
+
+    @media (min-width: $tablet_width) {
+      margin-right: 0;
+      margin-bottom: 9px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-right: 64px;
+    }
+  }
+}
+
+.live-example__slider {
+  margin: 0 -20px;
+
+  @media (min-width: $tablet_width) {
+    margin: 0 -30px;
+  }
+
+  @media (min-width: $desktop_width) {
+    flex-grow: 1;
+    margin: 0;
+  }
 }

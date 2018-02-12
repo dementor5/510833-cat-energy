@@ -1,24 +1,39 @@
 .questionnaire {
   padding-top: 15px;
   padding-bottom: 33px;
+
+  @media (min-width: $tablet_width) {
+    padding-top: 46px;
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 63px;
+    padding-bottom: 83px;
+  }
 }
 
 .questionnaire__title {
   margin: 0;
-  padding: 0 20px;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   font-weight: 400;
   font-size: 36px;
   line-height: 60px;
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 55px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .questionnaire__description {
   margin: 0;
-  padding: 0 20px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   font-weight: 400;
   font-size: 14px;
@@ -26,4 +41,19 @@
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 63px;
+    padding: 0 40px;
+
+    width: 465px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 63px;
+    padding: 0;
+  }
 }

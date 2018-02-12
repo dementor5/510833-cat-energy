@@ -1,24 +1,33 @@
 .product {
-  padding-top: 30px;
-  padding-right: 20px;
-  padding-left: 20px;
-
-  background-color: #f2f2f2;
-}
-
-.product__title {
   position: relative;
 
-  margin: 0;
-  margin-bottom: 29px;
-  margin-left: 70px;
+  padding: 30px 20px;
+  padding-bottom: 20px;
 
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 37px;
-  font-family: "Oswald", "Arial", sans-serif;
-  color: #111111;
-  text-transform: uppercase;
+  background-color: #f2f2f2;
+
+  @media (min-width: $tablet_width) {
+    padding-top: 76px;
+    padding-left: 53px;
+    padding-right: 280px;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 570px;
+    padding-right: 25px;
+    padding-left: 52px;
+  }
+
+  &--pro {
+    @media (min-width: $tablet_width) {
+      padding-right: 315px;
+    }
+
+    @media (min-width: $desktop_width) {
+      padding-right: 25px;
+    }
+  }
 
   &::before,
   &::after {
@@ -28,39 +37,133 @@
   }
 
   &::before {
-    top: -5px;
-    left: -69px;
+    top: 24px;
+    left: 22px;
 
     width: 50px;
     height: 50px;
 
     background-color: $main-green;
     border-radius: 50%;
+
+    @media (min-width: $tablet_width) {
+      top: 92px;
+      right: 62px;
+      left: auto;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop_width) {
+      top: 47px;
+      right: auto;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &--pro::before {
+    @media (min-width: $tablet_width) {
+      top: 91px;
+      right: 60px;
+    }
+
+    @media (min-width: $desktop_width) {
+      top: 47px;
+      right: auto;
+    }
   }
 
   &--slim::after {
-    top: -8px;
-    left: -61px;
+    top: 22px;
+    left: 30px;
 
     width: 35px;
     height: 49px;
 
     background-image: url("../img/icon-cat-slim.svg");
+
+    @media (min-width: $tablet_width) {
+      top: 80px;
+      right: 92px;
+      left: auto;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    @media (min-width: $desktop_width) {
+      top: 41px;
+      right: auto;
+      left: 66px;
+
+      width: 79px;
+      height: 97px;
+
+      background-repeat: no-repeat;
+    }
   }
 
   &--pro::after {
-    top: 5px;
-    left: -77px;
+    top: 35px;
+    left: 13px;
 
     width: 67px;
     height: 28px;
 
     background-image: url("../img/icon-cat-pro.svg");
+
+    @media (min-width: $tablet_width) {
+      top: 135px;
+      right: 28px;
+      left: auto;
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: $desktop_width) {
+      top: 69px;
+      right: auto;
+      left: 34px;
+
+      width: 134px;
+      height: 56px;
+    }
+  }
+}
+
+.product__title {
+  margin: 0;
+  margin-bottom: 29px;
+  margin-left: 71px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: #111111;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet_width) {
+    margin-left: 0;
+    margin-bottom: 25px;
+
+    font-size: 36px;
+    line-height: 37.02px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-left: 162px;
+    margin-bottom: 74px;
   }
 }
 
 .product__description {
   margin: 0;
+  margin-bottom: 19px;
   padding-bottom: 22px;
 
   font-weight: 400;
@@ -70,14 +173,23 @@
   color: #444444;
 
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 34px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    border: none;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 9px;
+  }
 }
 
 .product__link {
   position: relative;
-
-  display: inline-block;
-  padding-top: 19px;
-  padding-bottom: 22px;
 
   font-weight: 400;
   font-size: 16px;
@@ -87,15 +199,25 @@
   color: #111111;
   text-transform: uppercase;
 
+  @media (min-width: $tablet_width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &::after {
     content: "";
     position: absolute;
-    top: 21px;
-    right: -35px;
+    top: 7px;
+    right: -36px;
 
     width: 24px;
     height: 11px;
 
     background-image: url("../img/icon-right-arrow-long.svg");
+
+    @media (min-width: $tablet_width) {
+      top: 10px;
+      right: -47px;
+    }
   }
 }
