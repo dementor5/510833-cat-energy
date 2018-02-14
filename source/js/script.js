@@ -1,12 +1,12 @@
 var btnSelector = "main-nav__toggle";
 var menuSelector ="main-nav";
 var menuShowSelector = "main-nav--show";
-var menuCheckJSSelector = "main-nav--nojs";
+var tabPressSelector = "tabulated";
 
 var btn = document.querySelector("." + btnSelector);
 var menu = document.querySelector("." + menuSelector);
 
-menu.classList.remove(menuCheckJSSelector);
+document.documentElement.classList.remove("no-js");
 
 function openMenu () {
   menu.classList.add(menuShowSelector);
@@ -26,11 +26,19 @@ btn.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
+  if ((evt.keyCode === 9) || (evt.keyCode >= 37 && evt.keyCode <= 40)) {
+    document.documentElement.classList.add(tabPressSelector);
+  }
+
   if (evt.keyCode === 27) {
     if (menu.classList.contains(menuShowSelector)) {
       closeMenu();
     }
   }
+});
+
+window.addEventListener("mousedown", function (evt) {
+  document.documentElement.classList.remove(tabPressSelector);
 });
 
 document.querySelector("body").addEventListener("click", function(evt) {

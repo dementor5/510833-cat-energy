@@ -209,49 +209,13 @@
   display: flex;
   align-items: center;
 
-  &--email,
-  &--phone {
+  &--checkbox {
     position: relative;
   }
 
-  &--email::after {
-    content: "";
-
-    position: absolute;
-    top: 15px;
-    right: 15px;
-
-    width: 17px;
-    height: 13px;
-    background-image: url("../img/icon-mail.svg");
-
-    @media (min-width: $tablet_width) {
-      top: 23px;
-    }
-
-    @media (min-width: $desktop_width) {
-      right: 20px;
-    }
-  }
-
-  &--phone::after {
-    content: "";
-
-    position: absolute;
-    top: 12px;
-    right: 12px;
-
-    width: 20px;
-    height: 20px;
-    background-image: url("../img/icon-phone.svg");
-
-    @media (min-width: $tablet_width) {
-      top: 19px;
-    }
-
-    @media (min-width: $desktop_width) {
-      right: 19px;
-    }
+  &--email,
+  &--phone {
+    position: relative;
   }
 }
 
@@ -272,6 +236,127 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  &--radio {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -6px;
+      left: -46px;
+
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid #cecece;
+      border-radius: 50%;
+
+      @media (min-width: $tablet_width) {
+        top: -10px;
+        left: -60px;
+
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &--checkbox {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -5px;
+      left: -46px;
+
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid #cdcdcd;
+
+      @media (min-width: $tablet_width) {
+        top: -9px;
+        left: -59px;
+
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+.owner-form__radio:hover + .owner-form__signature--radio::before,
+.owner-form__radio:focus + .owner-form__signature--radio::before {
+  border: 1px solid #bcbcbc;
+}
+
+.tabulated .owner-form__radio:focus + .owner-form__signature--radio::before {
+  @include set-focus-outline;
+}
+
+.owner-form__radio:disabled + .owner-form__signature--radio {
+  opacity: 0.3;
+}
+
+.owner-form__radio:checked + .owner-form__signature--radio::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -37px;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: $main-green;
+  border-radius: 50%;
+
+  @media (min-width: $tablet_width) {
+    top: 1px;
+    left: -49px;
+
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.owner-form__checkbox:hover + .owner-form__signature--checkbox::before,
+.owner-form__checkbox:focus + .owner-form__signature--checkbox::before {
+  border: 1px solid #bababa;
+}
+
+.tabulated .owner-form__checkbox:focus + .owner-form__signature--checkbox::before {
+  @include set-focus-outline;
+}
+
+.owner-form__checkbox:disabled + .owner-form__signature--checkbox {
+  opacity: 0.3;
+}
+
+.owner-form__icon-tick {
+  display: none;
+}
+
+.owner-form__checkbox:checked ~ .owner-form__icon-tick {
+  position: absolute;
+  top: 3px;
+  left: -40px;
+
+  display: block;
+  width: 21px;
+  height: 16px;
+
+  @media (min-width: $tablet_width) {
+    top: 4px;
+    left: -49px;
+  }
+}
+
+.owner-form__checkbox:checked ~ .owner-form__icon-tick polygon {
+  fill: $main-green;
 }
 
 .owner-form__field,
@@ -289,6 +374,21 @@
 
   border: 1px solid rgba(205, 205, 205, 0.5);
 
+  @include set-focus;
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  &:active {
+    border: 1px solid #444444;
+  }
+
+  &:invalid {
+    border: 1px solid #ff8282;
+  }
+
   @media (min-width: $tablet_width) {
     padding-left: 16px;
 
@@ -299,6 +399,50 @@
 
 .owner-form__field--contacts {
   padding-right: 40px;
+}
+
+.owner-form__icon-mail {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 17px;
+  height: 13px;
+
+  @media (min-width: $tablet_width) {
+    top: 23px;
+  }
+
+  @media (min-width: $desktop_width) {
+    right: 20px;
+  }
+}
+
+.owner-form__icon-phone {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 20px;
+  height: 20px;
+
+  @media (min-width: $tablet_width) {
+    top: 19px;
+  }
+
+  @media (min-width: $desktop_width) {
+    right: 19px;
+  }
+}
+
+.owner-form__field--contacts:active ~ .owner-form__icon-mail path,
+.owner-form__field--contacts:active ~ .owner-form__icon-phone path {
+  fill: $main-green;
+}
+
+.owner-form__field--contacts:invalid ~ .owner-form__icon-mail path,
+.owner-form__field--contacts:invalid ~ .owner-form__icon-phone path {
+  fill: #ff8282;
 }
 
 .owner-form__comment {
@@ -400,96 +544,6 @@
         margin-bottom: 0;
       }
     }
-  }
-}
-
-.owner-form__signature-radio {
-  position: relative;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: -6px;
-    left: -46px;
-
-    width: 30px;
-    height: 30px;
-
-    border: 1px solid #cecece;
-    border-radius: 50%;
-
-    @media (min-width: $tablet_width) {
-      top: -10px;
-      left: -60px;
-
-      width: 40px;
-      height: 40px;
-    }
-  }
-}
-
-.owner-form__radio:checked + .owner-form__signature-radio::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: -37px;
-
-  width: 12px;
-  height: 12px;
-
-  background-color: $main-green;
-  border-radius: 50%;
-
-  @media (min-width: $tablet_width) {
-    top: 1px;
-    left: -49px;
-
-    width: 18px;
-    height: 18px;
-  }
-}
-
-.owner-form__signature-checkbox {
-  position: relative;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: -5px;
-    left: -46px;
-
-    width: 30px;
-    height: 30px;
-
-    border: 1px solid #cfcfcf;
-
-    @media (min-width: $tablet_width) {
-      top: -9px;
-      left: -59px;
-
-      width: 40px;
-      height: 40px;
-    }
-  }
-}
-
-.owner-form__checkbox:checked + .owner-form__signature::after {
-  content: "";
-
-  position: absolute;
-  top: 3px;
-  left: -40px;
-
-  width: 21px;
-  height: 16px;
-
-  background-image: url("../img/icon-tick.svg");
-
-  @media (min-width: $tablet_width) {
-    top: 4px;
-    left: -49px;
   }
 }
 

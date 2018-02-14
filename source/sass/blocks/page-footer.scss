@@ -42,16 +42,27 @@
   }
 }
 
-.page-footer__logo {
-  margin: 0;
+.page-footer__logo-link {
+  display: block;
   margin-bottom: 27px;
 
   text-align: center;
+
+  @include set-focus;
 
   @media (min-width: $tablet_width) {
     margin: 0;
     margin-top: 4px;
   }
+}
+
+.page-footer__logo-link[href]:hover .page-footer__logo,
+.page-footer__logo-link:focus .page-footer__logo {
+  opacity: 0.8;
+}
+
+.page-footer__logo-link[href]:active .page-footer__logo {
+  opacity: 0.6;
 }
 
 .page-footer__social-list {
@@ -78,6 +89,21 @@
   }
 }
 
+.page-footer__social-link {
+  display: block;
+
+  @include set_focus;
+}
+
+.page-footer__social-link:hover path,
+.page-footer__social-link:focus path {
+  fill: $main-green;
+}
+
+.page-footer__social-link:active {
+  opacity: 0.3;
+}
+
 .page-footer__vk {
   @media (min-width: $tablet_width) {
     width: 30px;
@@ -99,21 +125,9 @@
   }
 }
 
-.page-footer__links {
+.page-footer__link-academy {
   display: flex;
   justify-content: space-between;
-
-  @media (min-width: $tablet_width) {
-    margin-top: 9px;
-  }
-
-  @media (min-width: $desktop_width) {
-    margin-top: 0;
-  }
-}
-
-.page-footer__link-academy {
-  margin-top: 8px;
 
   font-weight: 400;
   font-size: 16px;
@@ -121,7 +135,32 @@
   font-family: "Arial", sans-serif;
   color: #444444;
 
+  @include set-focus;
+
   @media (min-width: $tablet_width) {
-    margin-right: 21px;
+    padding-top: 8px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 0;
+  }
+}
+
+.page-footer__link-academy:hover path,
+.page-footer__link-academy:focus path {
+  fill: $main-green;
+}
+
+.page-footer__link-academy:active .page-footer__link-academy-text,
+.page-footer__link-academy:active .page-footer__link-academy-image {
+  opacity: 0.3;
+}
+
+.page-footer__link-academy-text {
+  margin-top: 8px;
+
+  @media (min-width: $tablet_width) {
+    margin-top: 10px;
+    margin-right: 22px;
   }
 }

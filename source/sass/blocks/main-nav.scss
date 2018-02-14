@@ -11,31 +11,59 @@
   top: -54px;
   right: 0;
 
-  width: 24px;
-  height: 18px;
   margin-top: 12px;
   padding: 0;
 
-  background: url("../img/icon-mobile-menu.svg");
+  background-color: transparent;
   border: none;
   cursor: pointer;
 
   @media (min-width: $tablet_width) {
     display: none;
   }
+
+  @include set_focus;
 }
 
 .main-nav--show .main-nav__toggle {
   right: 3px;
-
-  width: 18px;
-  height: 18px;
-
-  background: url("../img/icon-close.svg");
 }
 
-.main-nav--nojs .main-nav__toggle {
+.no-js .main-nav__toggle {
   display: none;
+}
+
+.main-nav__icon:hover rect,
+.main-nav__icon:hover polygon,
+.main-nav__icon:focus rect,
+.main-nav__icon:focus polygon {
+  opacity: 0.8;
+}
+
+.main-nav__icon:active rect,
+.main-nav__icon:active polygon {
+  opacity: 0.6;
+}
+
+.main-nav__icon {
+  &--open {
+    width: 24px;
+    height: 18px;
+  }
+
+  &--close {
+    display: none;
+  }
+}
+
+.main-nav--show .main-nav__icon--open {
+  display: none;
+}
+
+.main-nav--show .main-nav__icon--close {
+  display: block;
+  width: 18px;
+  height: 18px;
 }
 
 .main-nav__list {
@@ -61,8 +89,10 @@
 }
 
 .main-nav--show .main-nav__list,
-.main-nav--nojs .main-nav__list {
-  display: block;
+.no-js .main-nav__list {
+  @media (max-width: $tablet_width) {
+    display: block;
+  }
 }
 
 .main-nav__item {
@@ -86,7 +116,7 @@
 }
 
 .main-nav--main-page .main-nav__item--active {
-  @media (min-width: $tablet_width) {
+  @media (min-width: $desktop_width) {
     border-color: white;
   }
 }
@@ -97,23 +127,46 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #111111;
+  color: rgba(17, 17, 17, 1);
 
   @media (min-width: $tablet_width) {
     font-weight: 400;
     font-size: 18px;
     line-height: 24.86px;
-    color: #222222;
   }
 
   @media (min-width: $desktop_width) {
     font-size: 20px;
     line-height: 24.86px;
   }
+
+  @include set_focus;
+
+  &[href]:hover,
+  &:focus {
+    color: rgba(17, 17, 17, 0.6);
+  }
+
+  &[href]:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
 }
 
 .page-header--main-page .main-nav__link {
   @media (min-width: $desktop_width) {
-    color: white;
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.page-header--main-page .main-nav__link[href]:hover,
+.page-header--main-page .main-nav__link:focus {
+  @media (min-width: $desktop_width) {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.page-header--main-page .main-nav__link[href]:active {
+  @media (min-width: $desktop_width) {
+    color: rgba(255, 255, 255, 0.3);
   }
 }

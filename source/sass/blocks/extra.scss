@@ -147,7 +147,6 @@
     background-position: 0 -350px;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 1px solid #e6e6e6;
   }
 
   @media (min-width: $desktop_width) {
@@ -157,30 +156,6 @@
     padding-top: 186px;
 
     background-position: center;
-  }
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 65px;
-    left: 50%;
-
-    width: 55px;
-    height: 60px;
-    margin-left: -27.5px;
-
-    background-image: url("../img/icon-gift.svg");
-
-    @media (min-width: $tablet_width) {
-      top: 65px;
-      left: 90px;
-    }
-
-    @media (min-width: $tablet_width) {
-      left: 50%;
-      margin-left: -27.5px;
-    }
   }
 }
 
@@ -205,5 +180,29 @@
     margin: 0 auto;
 
     text-align: center;
+  }
+}
+
+.extra-event-gift {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+
+  width: 55px;
+  height: 60px;
+  margin-left: -27.5px;
+
+  @media (min-width: $tablet_width) {
+    top: 65px;
+    left: 117px;
+  }
+
+  @media (min-width: $desktop_width) {
+    left: 50%;
+    margin-left: -27.5px;
+  }
+
+  path {
+    fill: white;
   }
 }

@@ -1,0 +1,15 @@
+@mixin set-focus-outline {
+  box-shadow:
+    0 0 0 3px #ffffff,
+    0 0 0 6px #2f7cc0;
+}
+
+@mixin set_focus {
+  &:focus {
+    outline: none;
+  }
+
+  .tabulated &:focus {
+    @include set-focus-outline;
+  }
+}
