@@ -1,6 +1,5 @@
 .page-header {
   padding-top: 11px;
-  padding-bottom: 12px;
 
   border-bottom: 1px solid #ededed;
 
@@ -8,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 24px;
+    padding-bottom: 12px;
 
     border: none;
   }
@@ -41,10 +41,22 @@
 .page-header__logo {
   display: inline-flex;
   align-items: center;
+  padding-bottom: 16px;
 
   @media (min-width: $tablet_width) {
     padding: 0;
   }
+
+  @include set_focus;
+}
+
+.page-header__logo[href]:hover .page-header__logo-image,
+.page-header__logo:focus .page-header__logo-image {
+  opacity: 0.8;
+}
+
+.page-header__logo[href]:active .page-header__logo-image {
+  opacity: 0.6;
 }
 
 .page-header__logo-image-mobile {
