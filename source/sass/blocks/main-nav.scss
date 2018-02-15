@@ -90,7 +90,7 @@
 
 .main-nav--show .main-nav__list,
 .no-js .main-nav__list {
-  @media (max-width: $tablet_width) {
+  @media (max-width: $mobile-width-only) {
     display: block;
   }
 }
