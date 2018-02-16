@@ -8,22 +8,43 @@
   color: white;
   text-align: center;
 
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-
   @media (min-width: $tablet_width) {
-    padding-top: 46px;
+    padding-top: 42px;
     padding-bottom: 533px;
 
     text-align: left;
     color: #111111;
-
-    background-image: none;
   }
 
   @media (min-width: $desktop_width) {
-    padding-top: 97px;
+    padding-top: 93px;
     padding-bottom: 268px;
+  }
+
+  ::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 320px;
+    height: 305px;
+
+    background-color: #64a83b;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
+
+    @media (min-width: $tablet_width) {
+      display: none;
+
+      background-image: none;
+    }
   }
 }
 
@@ -79,18 +100,14 @@
   left: 20px;
 
   @media (min-width: $tablet_width) {
-    top: 244px;
-    left: 86px;
+    top: 243px;
+    left: 29px;
     z-index: -1;
-
-    width: 709px;
   }
 
   @media (min-width: $desktop_width) {
-    top: 10px;
-    left: 510px;
-
-    width: 552px;
+    top: 13px;
+    left: 490px;
   }
 }
 

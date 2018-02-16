@@ -52,7 +52,7 @@ function initMap() {
     lat: 59.938667,
     lng: 30.323185
   };
-  var map = new google.maps.Map(document.querySelector(".contacts__map"), {
+  var map = new google.maps.Map(document.querySelector(".contacts__map-interactive"), {
     center: office,
     zoom: 17
   });

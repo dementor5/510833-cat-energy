@@ -30,10 +30,13 @@
       width: 680px;
       height: 696px;
 
-      background-image: url("../img/index-background-mobile@1x.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-color: #64a83b;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 680px auto;
+      }
     }
   }
 }
@@ -41,58 +44,53 @@
 .page-header__logo {
   display: inline-flex;
   align-items: center;
-  padding-bottom: 16px;
+  padding-bottom: 12px;
+
+  @include set_focus;
 
   @media (min-width: $tablet_width) {
     padding: 0;
   }
 
-  @include set_focus;
-}
-
-.page-header__logo[href]:hover .page-header__logo-image,
-.page-header__logo:focus .page-header__logo-image {
-  opacity: 0.8;
-}
-
-.page-header__logo[href]:active .page-header__logo-image {
-  opacity: 0.6;
-}
-
-.page-header__logo-image-mobile {
-  &--first {
-    height: 38px;
-    margin-right: 57px;
+  &:focus,
+  &[href]:hover {
+    .page-header__logo-image,
+    .page-header__logo-signature {
+      opacity: 0.8;
+    }
   }
 
-  &--second {
-    height: 18px;
-    margin-top: 5px;
+  &[href]:active {
+    .page-header__logo-image,
+    .page-header__logo-signature {
+      opacity: 0.6;
+    }
   }
+}
+
+.page-header__logo-image {
+  width: 33px;
+  height: 38px;
+  margin-right: 57px;
 
   @media (min-width: $tablet_width) {
-    display: none;
-  }
-}
-
-.page-header__logo-image-tablet {
-  display: none;
-
-  @media (min-width: $tablet_width) {
-    display: block;
+    width: 173px;
     height: 58px;
+    margin-right: 0;
   }
 
   @media (min-width: $desktop_width) {
-    display: none;
+    width: 202px;
+    height: 59px;
   }
 }
 
-.page-header__logo-image-desktop {
-  display: none;
+.page-header__logo-signature {
+  width: 101px;
+  height: 18px;
+  margin-top: 2px;
 
-  @media (min-width: $desktop_width) {
-    display: block;
-    height: 59px;
+  @media (min-width: $tablet_width) {
+    display: none;
   }
 }
