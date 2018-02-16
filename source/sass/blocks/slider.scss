@@ -1,10 +1,7 @@
 .slider {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 
   @media (min-width: $tablet_width) {
-    position: relative;
-
     padding-top: 1px;
     padding-bottom: 68px;
 
@@ -32,7 +29,6 @@
 }
 
 .slider__list {
-  order: -1;
   margin: 0;
   margin-bottom: 28px;
   padding: 0;
@@ -177,6 +173,23 @@
       background-color: $main-green;
       border-radius: 50%;
     }
+  }
+}
+
+.slider__btn {
+  position: absolute;
+  bottom: 0%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+
+  &--2 {
+    left: 65%;
+  }
+
+  @media (min-width: $tablet_width) {
+    bottom: 15%;
   }
 }
 
