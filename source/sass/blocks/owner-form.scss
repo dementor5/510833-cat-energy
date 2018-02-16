@@ -403,15 +403,12 @@
 
 .owner-form__icon-mail {
   position: absolute;
-  top: 15px;
+  top: 50%;
   right: 15px;
+  transform: translateY(-50%);
 
   width: 17px;
   height: 13px;
-
-  @media (min-width: $tablet_width) {
-    top: 23px;
-  }
 
   @media (min-width: $desktop_width) {
     right: 20px;
@@ -420,15 +417,12 @@
 
 .owner-form__icon-phone {
   position: absolute;
-  top: 12px;
+  top: 50%;
   right: 12px;
+  transform: translateY(-50%);
 
   width: 20px;
   height: 20px;
-
-  @media (min-width: $tablet_width) {
-    top: 19px;
-  }
 
   @media (min-width: $desktop_width) {
     right: 19px;

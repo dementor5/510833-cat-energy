@@ -69,7 +69,6 @@
   left: 3px;
 
   display: flex;
-  justify-content: space-between;
   width: 198px;
   margin: 0 auto;
 
@@ -92,6 +91,10 @@
   font-family: "Oswald", "Arial", sans-serif;
   color: #111111;
   text-transform: uppercase;
+
+  &:first-of-type {
+    margin-right: auto;
+  }
 
   @media (min-width: $tablet_width) {
     padding-top: 7px;
