@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js tabulated">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy: Подбор программы</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -10,10 +10,12 @@
 
     <header class="page-header container">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image page-header__logo-image-mobile page-header__logo-image-mobile--first" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
-        <img class="page-header__logo-image page-header__logo-image-mobile page-header__logo-image-mobile--second" src="img/logo-mobile-header.svg" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
-        <img class="page-header__logo-image page-header__logo-image-tablet" src="img/logo-tablet.png" width="173" height="58" alt="Интернет-магазин «Кэт энерджи»">
-        <img class="page-header__logo-image page-header__logo-image-desktop" src="img/logo-desktop.png" width="202" height="59" alt="Интернет-магазин «Кэт энерджи»">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Интернет-магазин «Кэт энерджи»">
+        </picture>
+        <img class="page-header__logo-signature" src="img/logo-mobile-header.svg" width="101" height="18" alt="Интернет-магазин «Кэт энерджи»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -195,12 +197,19 @@
             </address>
           </div>
         </div>
-        <div class="contacts__map"></div>
+        <div class="contacts__map-container">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="contacts__map" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+          </picture>
+          <div class="contacts__map-interactive"></div>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper container">
+      <div class="page-footer__wrapper page-footer__wrapper--form container">
         <a class="page-footer__logo-link" href="index.html">
           <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
         </a>
@@ -280,6 +289,7 @@
       </div>
     </footer>
 
+    <script src="js/picturefill.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -3,4 +3,6 @@ $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1300px;
 $max-width: 1440px;
-$mobile-width-only: 767px;
+$mobile-width-only: $tablet-width - 1;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

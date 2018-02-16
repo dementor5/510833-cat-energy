@@ -5,7 +5,7 @@
   background-color: #f2f2f2;
 
   @media (min-width: $tablet_width) {
-    padding-top: 44px;
+    padding-top: 43px;
     padding-bottom: 0;
 
     background-color: inherit;
@@ -27,14 +27,14 @@
   color: #111111;
 
   @media (min-width: $tablet_width) {
-    margin-bottom: 63px;
+    margin-bottom: 64px;
 
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: $desktop_width) {
-    padding-bottom: 12px;
+    padding-bottom: 11px;
   }
 }
 
@@ -51,9 +51,9 @@
 
 .live-example__description-wrapper {
   @media (min-width: $desktop_width) {
-    width: 610px;
+    width: 570px;
     padding-top: 71px;
-    padding-right: 175px;
+    padding-right: 135px;
   }
 }
 
