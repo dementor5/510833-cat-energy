@@ -33,15 +33,13 @@
   display: none;
 }
 
-.main-nav__icon:hover rect,
-.main-nav__icon:hover polygon,
-.main-nav__icon:focus rect,
-.main-nav__icon:focus polygon {
+.main-nav__icon:hover,
+.main-nav__icon:focus {
   opacity: 0.8;
 }
 
-.main-nav__icon:active rect,
-.main-nav__icon:active polygon {
+.main-nav__icon:active,
+.main-nav__icon:active {
   opacity: 0.6;
 }
 

@@ -355,7 +355,7 @@
   }
 }
 
-.owner-form__checkbox:checked ~ .owner-form__icon-tick polygon {
+.owner-form__checkbox:checked ~ .owner-form__icon-tick {
   fill: $main-green;
 }
 
@@ -429,13 +429,13 @@
   }
 }
 
-.owner-form__field--contacts:active ~ .owner-form__icon-mail path,
-.owner-form__field--contacts:active ~ .owner-form__icon-phone path {
+.owner-form__field--contacts:active ~ .owner-form__icon-mail,
+.owner-form__field--contacts:active ~ .owner-form__icon-phone {
   fill: $main-green;
 }
 
-.owner-form__field--contacts:invalid ~ .owner-form__icon-mail path,
-.owner-form__field--contacts:invalid ~ .owner-form__icon-phone path {
+.owner-form__field--contacts:invalid ~ .owner-form__icon-mail,
+.owner-form__field--contacts:invalid ~ .owner-form__icon-phone {
   fill: #ff8282;
 }
 
