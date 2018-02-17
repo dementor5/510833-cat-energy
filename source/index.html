@@ -4,9 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy: Главная</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
+
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header page-header--main-page container">
       <a class="page-header__logo">
         <picture>
@@ -118,8 +123,8 @@
             </div>
           </div>
           <div class="live-example__slider slider">
-            <input class="visually-hidden slider__btn slider__btn--1" id="slider__btn-1" type="radio" name="slider-btn" checked>
-            <input class="visually-hidden slider__btn slider__btn--2" id="slider__btn-2" type="radio" name="slider-btn">
+            <input class="slider__btn slider__btn--1" id="slider__btn-1" type="radio" name="slider-btn" checked>
+            <input class="slider__btn slider__btn--2" id="slider__btn-2" type="radio" name="slider-btn">
             <ul class="slider__list">
               <li class="slider__slide slider__slide--1">
                 <picture>
@@ -137,13 +142,13 @@
               </li>
             </ul>
             <div class="slider__controls">
+              <label class="slider__label" for="slider__btn-1"></label>
+              <label class="slider__label" for="slider__btn-2"></label>
               <span class="slider__signature">Было</span>
               <span class="slider__signature">Стало</span>
               <div class="slider__scale">
                 <div class="slider__switch"></div>
               </div>
-              <label class="slider__label" for="slider__btn-1"></label>
-              <label class="slider__label" for="slider__btn-2"></label>
             </div>
           </div>
         </div>
