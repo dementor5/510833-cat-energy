@@ -349,14 +349,12 @@
   width: 21px;
   height: 16px;
 
+  fill: $main-green;
+
   @media (min-width: $tablet_width) {
     top: 4px;
     left: -49px;
   }
-}
-
-.owner-form__checkbox:checked ~ .owner-form__icon-tick {
-  fill: $main-green;
 }
 
 .owner-form__field,
