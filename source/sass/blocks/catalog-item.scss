@@ -142,6 +142,8 @@
   }
 
   @media (min-width: $tablet_width) {
+    z-index: 0;
+
     display: flex;
     align-items: flex-end;
     width: 324px;
