@@ -1,6 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
+var run = require("run-sequence");
 var del = require("del");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
@@ -13,7 +14,8 @@ var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
-var run = require("run-sequence");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
 var server = require("browser-sync").create();
 
 gulp.task("clean", function () {
@@ -37,10 +39,7 @@ gulp.task("webp", function () {
 });
 
 gulp.task("copy", function () {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/js/**"
-  ], {
+  return gulp.src("source/fonts/**/*.{woff,woff2}", {
     base: "source"
   })
   .pipe(gulp.dest("build"));
@@ -61,7 +60,7 @@ gulp.task("style", function() {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("build/img/icon-*.svg")
+  return gulp.src("build/img/inline-*.svg")
   .pipe(svgstore({
     inlineSvg: true
   }))
@@ -74,7 +73,17 @@ gulp.task("html", function () {
   .pipe(posthtml([
     include()
   ]))
+  .pipe(htmlmin({
+    collapseWhitespace: true
+  }))
   .pipe(gulp.dest("build"))
+  .pipe(server.stream());
+});
+
+gulp.task("jsmin", function (){
+  return gulp.src("source/js/*.js")
+  .pipe(uglify())
+  .pipe(gulp.dest("build/js"))
   .pipe(server.stream());
 });
 
@@ -87,18 +96,9 @@ gulp.task("build", function (done) {
     "style",
     "sprite",
     "html",
+    "jsmin",
     done
   );
-});
-
-gulp.task("jsUpdate", function (){
-  return gulp.src([
-    "source/js/**"
-  ], {
-    base: "source"
-  })
-  .pipe(gulp.dest("build"))
-  .pipe(server.stream());
 });
 
 gulp.task("serve", function() {
@@ -112,5 +112,5 @@ gulp.task("serve", function() {
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html", ["html"]);
-  gulp.watch("source/js/*.js", ["jsUpdate"]);
+  gulp.watch("source/js/*.js", ["jsmin"]);
 });

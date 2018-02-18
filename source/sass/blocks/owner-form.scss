@@ -349,14 +349,12 @@
   width: 21px;
   height: 16px;
 
+  fill: $main-green;
+
   @media (min-width: $tablet_width) {
     top: 4px;
     left: -49px;
   }
-}
-
-.owner-form__checkbox:checked ~ .owner-form__icon-tick polygon {
-  fill: $main-green;
 }
 
 .owner-form__field,
@@ -429,13 +427,13 @@
   }
 }
 
-.owner-form__field--contacts:active ~ .owner-form__icon-mail path,
-.owner-form__field--contacts:active ~ .owner-form__icon-phone path {
+.owner-form__field--contacts:active ~ .owner-form__icon-mail,
+.owner-form__field--contacts:active ~ .owner-form__icon-phone {
   fill: $main-green;
 }
 
-.owner-form__field--contacts:invalid ~ .owner-form__icon-mail path,
-.owner-form__field--contacts:invalid ~ .owner-form__icon-phone path {
+.owner-form__field--contacts:invalid ~ .owner-form__icon-mail,
+.owner-form__field--contacts:invalid ~ .owner-form__icon-phone {
   fill: #ff8282;
 }
 

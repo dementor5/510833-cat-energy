@@ -208,6 +208,8 @@
   height: 60px;
   margin-left: -27.5px;
 
+  fill: white;
+
   @media (min-width: $tablet_width) {
     top: 65px;
     left: 118px;
@@ -216,9 +218,5 @@
   @media (min-width: $desktop_width) {
     left: 50%;
     margin-left: -27.5px;
-  }
-
-  path {
-    fill: white;
   }
 }
