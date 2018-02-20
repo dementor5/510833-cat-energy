@@ -11,7 +11,7 @@
   <body>
 
     <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
+      <include src="source/img/sprite.svg"></include>
     </div>
 
     <header class="page-header container">
@@ -26,10 +26,10 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть (закрыть) меню</span>
-          <svg class="main-nav__icon main-nav__icon--open" width="24" height="18" aria-hidden="true" role="presentation">
+          <svg class="main-nav__icon main-nav__icon--open" width="24" height="18" aria-hidden="true" role="presentation" focusable="false">
             <use xlink:href="#inline-icon-mobile-menu"></use>
           </svg>
-          <svg class="main-nav__icon main-nav__icon--close" width="18" height="18" aria-hidden="true" role="presentation">
+          <svg class="main-nav__icon main-nav__icon--close" width="18" height="18" aria-hidden="true" role="presentation" focusable="false">
             <use xlink:href="#inline-icon-close"></use>
           </svg>
         </button>
@@ -109,7 +109,7 @@
                 <label class="owner-form__label owner-form__label--email">
                   <span class="owner-form__signature">E-mail:*</span>
                   <input class="owner-form__field owner-form__field--contacts" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-                  <svg class="owner-form__icon-mail" width="17" height="13" aria-hidden="true" role="presentation">
+                  <svg class="owner-form__icon-mail" width="17" height="13" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#inline-icon-mail"></use>
                   </svg>
                 </label>
@@ -118,7 +118,7 @@
                 <label class="owner-form__label owner-form__label--phone">
                   <span class="owner-form__signature">Телефон:*</span>
                   <input class="owner-form__field owner-form__field--contacts" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-                  <svg class="owner-form__icon-phone" width="20" height="20" aria-hidden="true" role="presentation">
+                  <svg class="owner-form__icon-phone" width="20" height="20" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#inline-icon-phone"></use>
                   </svg>
                 </label>
@@ -142,7 +142,7 @@
                 <label class="owner-form__label owner-form__label--checkbox">
                   <input class="visually-hidden owner-form__checkbox" type="checkbox" name="sweetener" checked>
                   <span class="owner-form__signature owner-form__signature--checkbox">Сахарозаменитель</span>
-                  <svg class="owner-form__icon-tick" width="21" height="18" aria-hidden="true" role="presentation">
+                  <svg class="owner-form__icon-tick" width="21" height="18" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#inline-icon-tick"></use>
                   </svg>
                 </label>
@@ -151,7 +151,7 @@
                 <label class="owner-form__label owner-form__label--checkbox">
                   <input class="visually-hidden owner-form__checkbox" type="checkbox" name="water">
                   <span class="owner-form__signature owner-form__signature--checkbox">Питьевая вода</span>
-                  <svg class="owner-form__icon-tick" width="21" height="18" aria-hidden="true" role="presentation">
+                  <svg class="owner-form__icon-tick" width="21" height="18" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#inline-icon-tick"></use>
                   </svg>
                 </label>
@@ -160,7 +160,7 @@
                 <label class="owner-form__label owner-form__label--checkbox">
                   <input class="visually-hidden owner-form__checkbox" type="checkbox" name="milk">
                   <span class="owner-form__signature owner-form__signature--checkbox">Молоко</span>
-                  <svg class="owner-form__icon-tick" width="21" height="18" aria-hidden="true" role="presentation">
+                  <svg class="owner-form__icon-tick" width="21" height="18" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#inline-icon-tick"></use>
                   </svg>
                 </label>
@@ -169,7 +169,7 @@
                 <label class="owner-form__label owner-form__label--checkbox">
                   <input class="visually-hidden owner-form__checkbox" type="checkbox" name="vitamins">
                   <span class="owner-form__signature owner-form__signature--checkbox">Витамины</span>
-                  <svg class="owner-form__icon-tick" width="21" height="18" aria-hidden="true" role="presentation">
+                  <svg class="owner-form__icon-tick" width="21" height="18" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="#inline-icon-tick"></use>
                   </svg>
                 </label>
@@ -218,21 +218,21 @@
         <ul class="page-footer__social-list">
           <li>
             <a class="page-footer__social-link" href="https://vk.com/catenergy">
-              <svg class="page-footer__vk" width="22" height="12" aria-label="Переход на нашу группу вконтакте">
+              <svg class="page-footer__vk" width="22" height="12" aria-label="Переход на нашу группу вконтакте" focusable="false">
                 <use xlink:href="#inline-icon-vk-mobile"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="page-footer__social-link" href="https://instagram.com/catenergy">
-              <svg class="page-footer__insta" width="16" height="16" aria-label="Переход на нашу группу в инстаграмм">
+              <svg class="page-footer__insta" width="16" height="16" aria-label="Переход на нашу группу в инстаграмм" focusable="false">
                 <use xlink:href="#inline-icon-insta-mobile"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a class="page-footer__social-link" href="https://facebook.com/catenery" aria-label="Переход на нашу группу в фейсбук">
-              <svg class="page-footer__fb" width="10" height="19">
+            <a class="page-footer__social-link" href="https://facebook.com/catenery">
+              <svg class="page-footer__fb" width="10" height="19" aria-label="Переход на нашу группу в фейсбук" focusable="false">
                 <use xlink:href="#inline-icon-fb-mobile"></use>
               </svg>
             </a>
@@ -240,7 +240,7 @@
         </ul>
         <a class="page-footer__link-academy" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="page-footer__link-academy-text">HTML Academy</span>
-          <svg class="page-footer__link-academy-image" width="27" height="34" aria-hidden="true" role="presentation">
+          <svg class="page-footer__link-academy-image" width="27" height="34" aria-hidden="true" role="presentation" focusable="false">
             <use xlink:href="#inline-logo-htmlacademy"></use>
           </svg>
         </a>
