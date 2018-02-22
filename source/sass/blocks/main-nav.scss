@@ -9,8 +9,10 @@
 .main-nav__toggle {
   position: absolute;
   top: -54px;
-  right: 0;
+  right: -0px;
 
+  width: 24px;
+  height: 18px;
   margin-top: 12px;
   padding: 0;
 
@@ -18,34 +20,31 @@
   border: none;
   cursor: pointer;
 
+  @include set_focus;
+
   @media (min-width: $tablet_width) {
     display: none;
   }
-
-  @include set_focus;
-}
-
-.main-nav--show .main-nav__toggle {
-  right: 3px;
 }
 
 .no-js .main-nav__toggle {
   display: none;
 }
 
-.main-nav__icon:hover,
-.main-nav__icon:focus {
-  opacity: 0.8;
-}
-
-.main-nav__icon:active {
-  opacity: 0.6;
-}
-
 .main-nav__icon {
-  &--open {
-    width: 24px;
-    height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   &--close {
@@ -53,14 +52,16 @@
   }
 }
 
-.main-nav--show .main-nav__icon--open {
-  display: none;
-}
+.main-nav--show {
+  .main-nav__icon {
+    &--open {
+      display: none;
+    }
 
-.main-nav--show .main-nav__icon--close {
-  display: block;
-  width: 18px;
-  height: 18px;
+    &--close {
+      display: block;
+    }
+  }
 }
 
 .main-nav__list {

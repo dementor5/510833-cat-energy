@@ -85,6 +85,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 435px;
+  margin: 0 auto;
   margin-bottom: 34px;
 
   @media (min-width: $tablet_width) {

@@ -1,7 +1,4 @@
 .page-footer {
-  max-width: $mobile-width;
-  margin: 0 auto;
-
   background-color: #f2f2f2;
 
   @media (min-width: $tablet_width) {
@@ -83,6 +80,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
   margin-bottom: 22px;
   padding-top: 22px;
   padding-right: 82px;
@@ -156,6 +155,7 @@
 
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 
   font-weight: 400;
   font-size: 16px;

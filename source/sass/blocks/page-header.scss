@@ -1,5 +1,5 @@
 .page-header {
-  padding-top: 11px;
+  padding-top: 6px;
 
   border-bottom: 1px solid #ededed;
 
@@ -43,8 +43,10 @@
 .page-header__logo {
   position: relative;
 
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  width: calc(100% - 46px);
+  padding-top: 5px;
   padding-bottom: 12px;
 
   @include set_focus;
@@ -83,7 +85,7 @@
 .page-header__logo-image {
   width: 33px;
   height: 38px;
-  margin-right: 57px;
+  // margin-right: 57px;
 
   @media (min-width: $tablet_width) {
     width: 173px;
@@ -100,7 +102,11 @@
 .page-header__logo-signature {
   width: 101px;
   height: 18px;
-  margin-top: 2px;
+  margin-top: 1px;
+
+  position: absolute;
+  left: calc(50% + 23px);
+  transform: translateX(-50%);
 
   @media (min-width: $tablet_width) {
     display: none;

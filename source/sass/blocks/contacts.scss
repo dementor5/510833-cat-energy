@@ -1,5 +1,4 @@
 .contacts {
-  max-width: $mobile-width;
   margin: 0 auto;
   padding-top: 26px;
 
@@ -30,6 +29,9 @@
 
 .contacts__inner {
   display: flex;
+  justify-content: space-between;
+  max-width: $mobile-max-width;
+  margin: 0 auto;
   margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
@@ -55,7 +57,7 @@
 }
 
 .contacts__title {
-  width: 140px;
+  width: 144px;
   margin: 0;
   padding-top: 2px;
 

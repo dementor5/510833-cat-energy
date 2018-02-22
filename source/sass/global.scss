@@ -68,12 +68,14 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  width: 320px;
-  margin: 0 auto;
+  // width: 320px;
   padding: 0 20px;
+
+  // outline: 1px solid blue;
 
   @media (min-width: $tablet_width) {
     width: 768px;
+    margin: 0 auto;
     padding: 0 30px;
   }
 

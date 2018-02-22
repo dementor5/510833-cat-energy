@@ -9,6 +9,7 @@ var plumber = require("gulp-plumber");
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var notify = require("gulp-notify");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
@@ -50,7 +51,9 @@ gulp.task("copy", function () {
 
 gulp.task("style", function() {
   return gulp.src("source/sass/style.scss")
-  .pipe(plumber())
+  .pipe(plumber({
+    errorHandler: notify.onError("Error: <%= error.message %>")
+  }))
   .pipe(sass())
   .pipe(postcss([
     autoprefixer()

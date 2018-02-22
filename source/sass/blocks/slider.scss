@@ -29,7 +29,6 @@
 }
 
 .slider__list {
-  margin: 0;
   margin-bottom: 28px;
   padding: 0;
 
@@ -51,6 +50,7 @@
   display: none;
 
   width: 320px;
+  margin: 0 auto;
 
   @media (min-width: $tablet_width) {
     position: relative;
