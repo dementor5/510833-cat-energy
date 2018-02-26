@@ -52,6 +52,7 @@
   @include set_focus;
 
   @media (min-width: $tablet_width) {
+    width: auto;
     margin-right: auto;
     padding: 0;
   }

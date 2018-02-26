@@ -3,7 +3,6 @@
   padding-top: 26px;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
     padding-top: 63px;
   }
 
@@ -36,7 +35,8 @@
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
-    margin-bottom: 57px;
+    max-width: $tablet-max-width;
+    margin-bottom: 56px;
     padding-right: 42px;
     padding-left: 41px;
   }
@@ -75,6 +75,7 @@
 }
 
 .contacts__address {
+  width: 143px;
   padding-top: 2px;
 
   font-weight: 400;
@@ -85,13 +86,15 @@
   color: #444444;
 
   @media (min-width: $tablet-width) {
+    width: auto;
+
     font-size: 16px;
     line-height: 20px;
     text-align: right;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: -1px;
+    padding-top: 0;
 
     text-align: left;
   }
@@ -113,6 +116,8 @@
   overflow: hidden;
 
   height: 362px;
+
+  background-color: #f9f7f0;
 
   &::after {
     content: "";
@@ -152,7 +157,9 @@
 
 .contacts__map {
   position: absolute;
+  left: 50%;
   bottom: 0;
+  transform: translateX(-50%);
 
   @media (min-width: $desktop_width) {
     left: 50%;

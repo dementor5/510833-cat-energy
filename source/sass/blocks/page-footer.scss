@@ -1,12 +1,9 @@
 .page-footer {
   background-color: #f2f2f2;
 
-  @media (min-width: $tablet_width) {
-    max-width: $tablet-width;
-  }
-
   @media (min-width: $desktop-width) {
     max-width: $max-width;
+    margin: 0 auto;
   }
 }
 
@@ -166,6 +163,7 @@
   @include set-focus;
 
   @media (min-width: $tablet_width) {
+    margin: 0;
     padding-top: 10px;
   }
 

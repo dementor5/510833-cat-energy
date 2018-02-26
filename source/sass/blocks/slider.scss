@@ -29,6 +29,8 @@
 }
 
 .slider__list {
+  width: 320px;
+  margin: 0 auto;
   margin-bottom: 28px;
   padding: 0;
 
@@ -36,11 +38,13 @@
     position: relative;
     z-index: 2;
 
+    width: 768px;
     margin-top: -170px;
     margin-bottom: 8px;
   }
 
   @media (min-width: $desktop_width) {
+    width: 100%;
     margin-top: -192px;
     margin-bottom: 30px;
   }
@@ -50,13 +54,13 @@
   display: none;
 
   width: 320px;
-  margin: 0 auto;
 
   @media (min-width: $tablet_width) {
     position: relative;
     left: 46px;
 
     width: 690px;
+    margin: 0;
   }
 
   @media (min-width: $desktop_width) {

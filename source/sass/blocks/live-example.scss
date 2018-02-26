@@ -91,13 +91,14 @@
 
   @media (min-width: $tablet_width) {
     flex-wrap: nowrap;
+    max-width: 100%;
     margin-bottom: 249px;
   }
 
   @media (min-width: $desktop_width) {
     flex-wrap: wrap;
     width: 366px;
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
